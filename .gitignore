@@ -1,0 +1,43 @@
+# =============== #
+# Unity generated #
+# =============== #
+project/Temp/
+project/Obj/
+project/UnityGenerated/
+project/Library/
+project/Assets/AssetStoreTools*
+
+project/Temp/*
+project/Obj/*
+project/UnityGenerated/*
+project/Library/*
+project/Assets/AssetStoreTools*
+
+project/Build/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+*.un~
