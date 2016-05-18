@@ -1,19 +1,19 @@
 # =============== #
 # Unity generated #
 # =============== #
-project/Temp/
-project/Obj/
-project/UnityGenerated/
-project/Library/
-project/Assets/AssetStoreTools*
+Bialjam/Temp/
+Bialjam/Obj/
+Bialjam/UnityGenerated/
+Bialjam/Library/
+Bialjam/Assets/AssetStoreTools*
 
-project/Temp/*
-project/Obj/*
-project/UnityGenerated/*
-project/Library/*
-project/Assets/AssetStoreTools*
+Bialjam/Temp/*
+Bialjam/Obj/*
+Bialjam/UnityGenerated/*
+Bialjam/Library/*
+Bialjam/Assets/AssetStoreTools*
 
-project/Build/
+Bialjam/Build/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
