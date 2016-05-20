@@ -4,7 +4,6 @@ using System.Collections;
 public class GlobalVariable
 {
     // system variables
-    public int fpsValue = 10;
     public int buttonSize = 2;
 
     // game variables

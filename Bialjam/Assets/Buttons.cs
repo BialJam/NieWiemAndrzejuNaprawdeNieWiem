@@ -17,6 +17,7 @@ public class Buttons
     }
     public static void PauseGame()
     {
+        Time.timeScale = 1;
         Debug.Log("Gra zapauzowana");
     }
 }
