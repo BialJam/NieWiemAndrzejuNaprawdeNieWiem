@@ -4,7 +4,7 @@ using System.Collections;
 public class Turret : MonoBehaviour {
 	private bool shoot_speed;
 	public Bullet bullet;
-	public const bool need_to_live; 
+	public bool need_to_live; 
 	// Use this for initialization
 	void Start (bool first, bool second) {
 		shoot_speed = first;
