@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class Turret : MonoBehaviour {
-	private const bool shoot_speed;
-	public GameObject Bullet;
+	private bool shoot_speed;
+	public Bullet bullet;
 	public const bool need_to_live; 
 	// Use this for initialization
 	void Start (bool first, bool second) {
@@ -13,6 +13,7 @@ public class Turret : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Vector3 targetPosition = Me.TransformPoint(new Vector3(0, 5, -10));
+		
+	//	private Vector2 vector = new Vector2();
 	}
 }
