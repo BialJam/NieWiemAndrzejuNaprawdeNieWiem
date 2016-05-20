@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class Player : MonoBehaviour {
-	Vector2 position;
-
+	public GameObject body;
 	// Use this for initialization
 	void Start () {
 	
@@ -12,8 +11,5 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-	}
-	public Vector2 getPosition() {
-		return position;
 	}
 }
