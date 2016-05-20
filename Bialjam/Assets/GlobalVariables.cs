@@ -1,15 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GlobalVariables : MonoBehaviour {
+public class GlobalVariable
+{
+    // system variables
+    public int fpsValue = 10;
+    public int buttonSize = 2;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    // game variables
+
+
+    private static GlobalVariable instance;
+    public static GlobalVariable Instance
+    {
+        get
+        {
+            if(instance==null)
+            {
+                instance = new GlobalVariable();
+            }
+            return instance;
+        }
+    }
 }
