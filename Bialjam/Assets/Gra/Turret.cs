@@ -2,18 +2,21 @@
 using System.Collections;
 
 public class Turret : MonoBehaviour {
-	private bool shoot_speed;
-	public Bullet bullet;
-	public bool need_to_live; 
+	private float shoot_speed = 0.5f;
+	//public bool need_to_live = 0;
+	public GameObject bullet=null;
 	// Use this for initialization
-	void Start (bool first, bool second) {
-		shoot_speed = first;
-		need_to_live = second;
+	void Start () {
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		// Initiate the bullet and store in shot var
+		//GameObject shot = GameObject.Instantiate (bullet, transform.position + (transform.forward * 2), transform.rotation);
+
+		// Add force to the instance
+		//shot.rigidbody.AddForce(transform.forward * shoot_speed);
+
 	//	private Vector2 vector = new Vector2();
 	}
 }
