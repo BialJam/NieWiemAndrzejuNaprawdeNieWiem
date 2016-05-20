@@ -48,6 +48,8 @@ public class Game : MonoBehaviour
             if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 + 26, 128, 32), "Exit"))
             {
                 Debug.Log("Game aborted");
+                paused = false;
+                Time.timeScale = 1;
                 SceneManager.LoadScene("Menu");
             }
         }
