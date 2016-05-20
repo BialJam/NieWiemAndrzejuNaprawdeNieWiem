@@ -28,6 +28,7 @@ public class Game : MonoBehaviour
                 Time.timeScale = 1;
             }
         }
+        
     }
 
     void OnGUI()
@@ -35,11 +36,10 @@ public class Game : MonoBehaviour
         GUI.skin = mySkin;
         if (paused)
         {
-            if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 - 58, 128, 32), "Start game"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 - 58, 128, 32), "Return"))
             {
+                paused = false;
                 Time.timeScale = 1;
-                Debug.Log("Game started");
-                SceneManager.LoadScene("Game");
             }
             if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 - 16, 128, 32), "Options"))
             {
@@ -47,8 +47,10 @@ public class Game : MonoBehaviour
             }
             if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 + 26, 128, 32), "Exit"))
             {
-                Debug.Log("Quit Game");
-                Application.Quit();
+                Debug.Log("Game aborted");
+                paused = false;
+                Time.timeScale = 1;
+                SceneManager.LoadScene("Menu");
             }
         }
     }
