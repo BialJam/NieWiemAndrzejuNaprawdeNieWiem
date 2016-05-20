@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour {
 	}
 
 	void onCollision() {
-		Bullet v1 = new Bullet (PLAYER.position, Quaternion.AngleAxis (-45, Vector2.right) * speed);
-		Bullet v2 = new Bullet (PLAYER.position, Quaternion.AngleAxis (45, Vector2.right) * speed);
+		//Bullet v1 = new Bullet (PLAYER.position, Quaternion.AngleAxis (-45, Vector2.right) * speed);
+		//Bullet v2 = new Bullet (PLAYER.position, Quaternion.AngleAxis (45, Vector2.right) * speed);
 	}
 }

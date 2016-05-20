@@ -180,6 +180,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1843072278}
   - 114: {fileID: 1843072277}
+  - 114: {fileID: 1843072279}
   m_Layer: 0
   m_Name: Menu
   m_TagString: Untagged
@@ -211,3 +212,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1843072279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1843072276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfdc32aa1a40ffd42bee67a088eba830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPS: 10
