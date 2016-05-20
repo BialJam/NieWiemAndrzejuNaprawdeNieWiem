@@ -20,4 +20,8 @@ public class Buttons
         Time.timeScale = 1;
         Debug.Log("Gra zapauzowana");
     }
+    public static void SaveScore()
+    {
+        Debug.Log("Zapisane");
+    }
 }
