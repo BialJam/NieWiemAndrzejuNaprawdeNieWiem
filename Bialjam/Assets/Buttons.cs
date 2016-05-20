@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+
 public class Buttons
 {
     public static void StartGame()
@@ -20,8 +21,14 @@ public class Buttons
         Time.timeScale = 1;
         Debug.Log("Gra zapauzowana");
     }
-    public static void SaveScore()
+    public static void SaveScore(string s)
     {
+        if (GlobalVariable.Instance.highscore < GlobalVariable.Instance.score)
+        {
+            GlobalVariable.Instance.highscore = GlobalVariable.Instance.score;
+            GlobalVariable.Instance.bestname = s;
+        }
+
         Debug.Log("Zapisane");
     }
 }

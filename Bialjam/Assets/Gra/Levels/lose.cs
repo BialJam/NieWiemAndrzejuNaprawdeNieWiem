@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class lose : MonoBehaviour {
     public GUISkin mySkin;
+    public InputField inputfield;
 	// Use this for initialization
 	void Start () {
 	
@@ -21,15 +23,15 @@ public class lose : MonoBehaviour {
     {
         GUI.skin = mySkin;
         int siz = GlobalVariable.Instance.buttonSize;
-        if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 58 * siz, 128 * siz, 32 * siz), "Save score"))
+        if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 12 * siz, 128 * siz, 32 * siz), "Save score"))
         {
-            Buttons.SaveScore();
+            Buttons.SaveScore(inputfield.text);
         }
-        if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 16 * siz, 128 * siz, 32 * siz), "Start new game"))
+        if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 24 * siz, 128 * siz, 32 * siz), "Start new game"))
         {
             Buttons.StartGame();
         }
-        if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 26 * siz, 128 * siz, 32 * siz), "Menu"))
+        if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 60 * siz, 128 * siz, 32 * siz), "Menu"))
         {
             SceneManager.LoadScene("Menu");
         }
