@@ -97,7 +97,7 @@ GameObject:
   - 114: {fileID: 202107659}
   - 114: {fileID: 202107658}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: nickname
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -8,6 +8,8 @@ public class GlobalVariable
 
     // game variables
     public int score;
+    public int highscore;
+    public string bestname;
 
     private static GlobalVariable instance;
     public static GlobalVariable Instance
