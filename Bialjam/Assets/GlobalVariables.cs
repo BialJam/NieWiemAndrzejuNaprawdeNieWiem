@@ -7,7 +7,7 @@ public class GlobalVariable
     public int buttonSize = 2;
 
     // game variables
-
+    public int score;
 
     private static GlobalVariable instance;
     public static GlobalVariable Instance
