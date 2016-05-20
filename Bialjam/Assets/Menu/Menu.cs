@@ -22,9 +22,7 @@ public class Menu : MonoBehaviour
         GUI.skin = mySkin;
         if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 - 58, 128, 32), "Start game"))
         {
-            Time.timeScale = 1;
-            Debug.Log("Game started");
-            SceneManager.LoadScene("Game");
+            Buttons.StartGame();
         }
         if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 - 16, 128, 32), "Options"))
         {
@@ -32,8 +30,7 @@ public class Menu : MonoBehaviour
         }
         if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 + 26, 128, 32), "Exit"))
         {
-            Debug.Log("Quit Game");
-            Application.Quit();
+            Buttons.ExitGame();
         }
     }
 }
