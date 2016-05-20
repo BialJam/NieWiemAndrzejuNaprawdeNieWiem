@@ -2,8 +2,8 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class Game : MonoBehaviour
-{
+public class Level : MonoBehaviour {
+
     public GUISkin mySkin;
     public static bool paused;
     // Use this for initialization
@@ -28,24 +28,25 @@ public class Game : MonoBehaviour
                 Time.timeScale = 1;
             }
         }
-        
+
     }
 
     void OnGUI()
     {
         GUI.skin = mySkin;
+        int siz = GlobalVariable.Instance.buttonSize;
         if (paused)
         {
-            if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 - 58, 128, 32), "Return"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 58 * siz, 128 * siz, 32 * siz), "Return"))
             {
                 paused = false;
                 Time.timeScale = 1;
             }
-            if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 - 16, 128, 32), "Options"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 16 * siz, 128 * siz, 32 * siz), "Options"))
             {
                 SceneManager.LoadScene("Options");
             }
-            if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 + 26, 128, 32), "Exit"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 26 * siz, 128 * siz, 32 * siz), "Exit"))
             {
                 Debug.Log("Game aborted");
                 paused = false;

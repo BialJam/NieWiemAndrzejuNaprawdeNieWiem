@@ -20,15 +20,16 @@ public class Menu : MonoBehaviour
     void OnGUI()
     {
         GUI.skin = mySkin;
-        if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 - 58, 128, 32), "Start game"))
+        int siz = GlobalVariable.Instance.buttonSize;
+        if (GUI.Button(new Rect(Screen.width / 2 - 64*siz, Screen.height / 2 - 58 * siz, 128 * siz, 32 * siz), "Start game"))
         {
             Buttons.StartGame();
         }
-        if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 - 16, 128, 32), "Options"))
+        if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 16 * siz, 128 * siz, 32 * siz), "Options"))
         {
             SceneManager.LoadScene("Options");
         }
-        if (GUI.Button(new Rect(Screen.width / 2 - 64, Screen.height / 2 + 26, 128, 32), "Exit"))
+        if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 26 * siz, 128 * siz, 32 * siz), "Exit"))
         {
             Buttons.ExitGame();
         }

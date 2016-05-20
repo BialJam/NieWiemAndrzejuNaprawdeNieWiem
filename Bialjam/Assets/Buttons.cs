@@ -8,7 +8,7 @@ public class Buttons
     {
         Time.timeScale = 1;
         Debug.Log("Gra wystartowala");
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level 1");
     }
     public static void ExitGame()
     {
