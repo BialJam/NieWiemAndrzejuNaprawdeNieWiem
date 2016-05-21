@@ -16,8 +16,8 @@ TagManager:
   - Bullet
   - Enemy
   - Player
-  - Passable
-  - 
+  - Passable Bullet
+  - Wall
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemy
+    uniqueID: 1533355285
+    locked: 0
+  - name: Player
+    uniqueID: 1340042951
+    locked: 0
+  - name: Bullet
+    uniqueID: 2658752451
+    locked: 0
+  - name: Passable Bullet
+    uniqueID: 3163772443
     locked: 0

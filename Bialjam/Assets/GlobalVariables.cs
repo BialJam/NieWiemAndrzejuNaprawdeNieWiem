@@ -11,7 +11,8 @@ public class GlobalVariable
     public int highscore = 0;
     public string bestname = "-";
     public int level;
-    public int playerHealth = 100;
+	public int playerHealth = 100;
+	public float BulletForwardForce = 400.0f;
 
     private static GlobalVariable instance;
     public static GlobalVariable Instance

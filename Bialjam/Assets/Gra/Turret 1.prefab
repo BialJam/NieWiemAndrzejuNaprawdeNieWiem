@@ -143,7 +143,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: -0.04, y: -0.02}
   serializedVersion: 2
@@ -187,7 +187,7 @@ MonoBehaviour:
   RU: {fileID: 21300000, guid: cda29fb6b028a464a9ab5285ead6cdcc, type: 3}
   RC: {fileID: 21300002, guid: cda29fb6b028a464a9ab5285ead6cdcc, type: 3}
   RD: {fileID: 21300004, guid: cda29fb6b028a464a9ab5285ead6cdcc, type: 3}
-  BulletForwardForce: 75
+  BulletForwardForce: 400
   shootExhaust: 1
 --- !u!212 &21200064
 SpriteRenderer:
@@ -213,7 +213,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1533355285
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cda29fb6b028a464a9ab5285ead6cdcc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -243,7 +243,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1533355285
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: abdaf989fd5ec4e25955c326c33c4286, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

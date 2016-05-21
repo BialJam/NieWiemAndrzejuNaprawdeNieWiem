@@ -8,10 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 405462}
-  - 114: {fileID: 11431598}
   - 50: {fileID: 5064422}
   - 61: {fileID: 6136752}
-  - 114: {fileID: 11407556}
+  - 114: {fileID: 11423092}
   m_Layer: 8
   m_Name: Bullet 1
   m_TagString: Untagged
@@ -109,18 +108,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11407556
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 118430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4c1419b6bf3ed34ca504f24bf81fbcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11431598
+--- !u!114 &11423092
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -156,7 +144,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1636214845
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 764adc34c8531f245b319fa321c82e27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

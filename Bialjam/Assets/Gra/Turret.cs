@@ -9,7 +9,6 @@ public class Turret : MonoBehaviour {
 	public GameObject Player;
 	public SpriteRenderer Eye;
 	public Sprite LU, LC, LD, RU, RC, RD;
-	public float BulletForwardForce = 1.0f;
 	public double shootExhaust = 100.0f; // seconds
 	private double nextShoot = 0.0f; //internal
 	void Start () {
@@ -39,7 +38,7 @@ public class Turret : MonoBehaviour {
 		//Retrieve the Rigidbody component from the instantiated Bullet and control it.
 		Rigidbody2D Temporary_RigidBody;
 		Temporary_RigidBody = Temporary_Bullet_Handler.GetComponent<Rigidbody2D>();
-		Temporary_RigidBody.AddForce(Direction * BulletForwardForce);
+		Temporary_RigidBody.AddForce(Direction * GlobalVariable.Instance.BulletForwardForce);
 		Destroy (Temporary_Bullet_Handler, 10.0f); // destruct after 10 seconds
 	}
 
