@@ -13,7 +13,6 @@ public class Level : MonoBehaviour
     void Start()
     {
         GlobalVariable.Instance.level++;
-        GlobalVariable.Instance.SetPlayerHealth(100);
         Time.timeScale = 1;
         paused = false;
         pauseBackground.SetActive(false);
@@ -22,7 +21,7 @@ public class Level : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeScale==1)
+        if (Time.timeScale == 1)
         {
             if (DateTime.Now.Second % 5 == 0 && DateTime.Now.Millisecond < 50) GlobalVariable.Instance.score += 5;
         }
@@ -43,10 +42,15 @@ public class Level : MonoBehaviour
                 Thread.Sleep(100);
             }
         }
-        if (GlobalVariable.Instance.GetPlayerHealth()<=0 )
+        if (GlobalVariable.Instance.GetPlayerHealth() <= 0)
         {
             Time.timeScale = 0;
             Buttons.LosedGame();
+        }
+        if (GlobalVariable.Instance.enemies == 0)
+        {
+            GlobalVariable.Instance.score += GlobalVariable.Instance.playerHealth * 10;
+            GlobalVariable.Instance.ChangePlayerHealth(25);
         }
     }
 

@@ -12,6 +12,7 @@ public class GlobalVariable
     public string bestname = "-";
     public int level;
 	public int playerHealth = 100;
+    public int enemies = 0;
 	public float BulletForwardForce = .04f;
 
     private static GlobalVariable instance;
@@ -32,7 +33,7 @@ public class GlobalVariable
     }
     public void ChangePlayerHealth(int health)
     {
-        playerHealth += health;
+        playerHealth = Mathf.Min(playerHealth+health, 100);
     }
     public int GetPlayerHealth()
     {
