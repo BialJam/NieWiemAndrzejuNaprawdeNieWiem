@@ -5,7 +5,7 @@ using System;
 
 public class Level : MonoBehaviour
 {
-
+    public GameObject pauseBackground;
     public GUISkin mySkin;
     public static bool paused;
     // Use this for initialization
@@ -15,6 +15,7 @@ public class Level : MonoBehaviour
         GlobalVariable.Instance.SetPlayerHealth(100);
         Time.timeScale = 1;
         paused = false;
+        pauseBackground.SetActive(false);
     }
 
     // Update is called once per frame
@@ -29,11 +30,13 @@ public class Level : MonoBehaviour
         {
             if (!paused)
             {
+                pauseBackground.SetActive(true);
                 paused = true;
                 Time.timeScale = 0;
             }
             else
             {
+                pauseBackground.SetActive(false);
                 paused = false;
                 Time.timeScale = 1;
             }
@@ -53,6 +56,7 @@ public class Level : MonoBehaviour
         {
             if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 58 * siz, 128 * siz, 32 * siz), "Return"))
             {
+                pauseBackground.SetActive(false);
                 paused = false;
                 Time.timeScale = 1;
             }
@@ -62,6 +66,7 @@ public class Level : MonoBehaviour
             }
             if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 26 * siz, 128 * siz, 32 * siz), "Exit"))
             {
+                pauseBackground.SetActive(false);
                 Debug.Log("Game aborted");
                 paused = false;
                 Time.timeScale = 1;
