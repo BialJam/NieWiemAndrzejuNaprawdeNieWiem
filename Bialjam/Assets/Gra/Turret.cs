@@ -102,4 +102,9 @@ public class Turret : MonoBehaviour {
 			Aura.transform.localPosition = new Vector3 (-.05f, 0, 0);
 		}
 	}
+	void OnDamage() {
+		if (aura) {
+			GlobalVariable.Instance.ChangePlayerHealth(50);
+		}
+	}
 }
