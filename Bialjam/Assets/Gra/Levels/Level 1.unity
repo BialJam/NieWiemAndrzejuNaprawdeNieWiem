@@ -695,7 +695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseBackground: {fileID: 2033933360}
   mySkin: {fileID: 11400000, guid: 11191657d3533d54faf50d50f4b62af6, type: 2}
-  enemies: 1
+  enemies: 2
 --- !u!4 &1749473267
 Transform:
   m_ObjectHideFlags: 0
@@ -875,11 +875,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 484512, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.94774604
+      value: -7.95
       objectReference: {fileID: 0}
     - target: {fileID: 484512, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.5282325
+      value: -3.46
       objectReference: {fileID: 0}
     - target: {fileID: 484512, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
       propertyPath: m_LocalPosition.z

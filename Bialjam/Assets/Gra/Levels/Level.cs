@@ -10,13 +10,15 @@ public class Level : MonoBehaviour
     public GUISkin mySkin;
     public static bool paused;
     public int enemies;
+    public int level;
     // Use this for initialization
     void Start()
     {
-        GlobalVariable.Instance.level++;
         Time.timeScale = 1;
         paused = false;
         pauseBackground.SetActive(false);
+        GlobalVariable.Instance.level = level;
+        GlobalVariable.Instance.SetEnemiesCount(enemies);
     }
 
     // Update is called once per frame
@@ -48,11 +50,11 @@ public class Level : MonoBehaviour
             Time.timeScale = 0;
             Buttons.LosedGame();
         }
-        if (enemies <= 0)
+        if (GlobalVariable.Instance.enemies <= 0)
         {
             GlobalVariable.Instance.score += GlobalVariable.Instance.playerHealth * 10;
-            GlobalVariable.Instance.ChangePlayerHealth(25);
-            SceneManager.LoadScene("Level " + GlobalVariable.Instance.level);
+            GlobalVariable.Instance.SetPlayerHealth(100);
+            SceneManager.LoadScene("Level " + ++GlobalVariable.Instance.level);
         }
     }
 

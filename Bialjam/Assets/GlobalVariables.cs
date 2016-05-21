@@ -14,7 +14,11 @@ public class GlobalVariable
 	public int playerHealth = 100;
     public int enemies = 0;
 	public float BulletForwardForce = .04f;
-
+    
+    public void SetEnemiesCount(int e)
+    {
+        enemies = e;
+    }
     private static GlobalVariable instance;
     public static GlobalVariable Instance
     {
