@@ -8,6 +8,9 @@ public class Buttons
     public static void StartGame()
     {
         Time.timeScale = 1;
+        GlobalVariable.Instance.level = 0;
+        GlobalVariable.Instance.SetPlayerHealth(100);
+        GlobalVariable.Instance.score = 0;
         Debug.Log("Gra wystartowala");
         SceneManager.LoadScene("Level 1");
     }
