@@ -9,7 +9,7 @@ public class Turret : MonoBehaviour {
 	public GameObject Player;
 	public SpriteRenderer Eye;
 	public Sprite LU, LC, LD, RU, RC, RD;
-	public double shootExhaust = 100.0f; // seconds
+	public double shootExhaust; // seconds
 	private double nextShoot = 0.0f; //internal
 	private bool lewo;
 	void Start () {
