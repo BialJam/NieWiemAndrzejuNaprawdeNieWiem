@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Level : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class Level : MonoBehaviour
                 Time.timeScale = 1;
             }
         }
-
+        if (DateTime.Now.Second % 5 == 0 && DateTime.Now.Millisecond < 10) GlobalVariable.Instance.score += 5 ;
     }
 
     void OnGUI()
