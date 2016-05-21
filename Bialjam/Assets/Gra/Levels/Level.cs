@@ -9,6 +9,7 @@ public class Level : MonoBehaviour
     public GameObject pauseBackground;
     public GUISkin mySkin;
     public static bool paused;
+    public int enemies;
     // Use this for initialization
     void Start()
     {
@@ -47,10 +48,11 @@ public class Level : MonoBehaviour
             Time.timeScale = 0;
             Buttons.LosedGame();
         }
-        if (GlobalVariable.Instance.enemies == 0)
+        if (enemies == 0)
         {
             GlobalVariable.Instance.score += GlobalVariable.Instance.playerHealth * 10;
             GlobalVariable.Instance.ChangePlayerHealth(25);
+            SceneManager.LoadScene("Level " + GlobalVariable.Instance.level);
         }
     }
 
