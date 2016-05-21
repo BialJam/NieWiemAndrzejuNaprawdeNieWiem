@@ -11,6 +11,7 @@ public class Turret : MonoBehaviour {
 	public Sprite LU, LC, LD, RU, RC, RD;
 	public double shootExhaust = 100.0f; // seconds
 	private double nextShoot = 0.0f; //internal
+	private bool lewo;
 	void Start () {
 		Player = GameObject.Find ("Player 1");
 	}
@@ -52,17 +53,30 @@ public class Turret : MonoBehaviour {
 		if (angle % 60 > 30)
 			angle += 60;
 		angle -= angle % 60;
-		if (angle < 15 || angle >= 315)
+		if (angle < 15 || angle >= 315) {
 			Eye.sprite = LC;
-		else if (angle < 75)
+			lewo = true;
+		} else if (angle < 75) {
 			Eye.sprite = LD;
-		else if (angle < 135)
+			lewo = true;
+		} else if (angle < 135){
 			Eye.sprite = RD;
-		else if (angle < 195)
+			lewo = false;
+		} else if (angle < 195){
 			Eye.sprite = RC;
-		else if (angle < 255)
+			lewo = false;
+		} else if (angle < 255){
 			Eye.sprite = RU;
-		else if (angle < 315)
+			lewo = false;
+		} else if (angle < 315) {
 			Eye.sprite = LU;
+			lewo = true;
+		}
+		Debug.Log (lewo);
+		if (lewo) {
+			GameObject.Find ("Turret Body").transform.eulerAngles = new Vector3 (0, 180, 0);
+		} else {
+			GameObject.Find ("Turret Body").transform.eulerAngles = new Vector3 (0, 0, 0);
+		}
 	}
 }
