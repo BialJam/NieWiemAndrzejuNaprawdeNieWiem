@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class Level : MonoBehaviour {
+public class Level : MonoBehaviour
+{
 
     public GUISkin mySkin;
     public static bool paused;

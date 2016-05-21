@@ -10,6 +10,7 @@ public class GlobalVariable
     public int score;
     public int highscore;
     public string bestname;
+    public int level;
 
     private static GlobalVariable instance;
     public static GlobalVariable Instance

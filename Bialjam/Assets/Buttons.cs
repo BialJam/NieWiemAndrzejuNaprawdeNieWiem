@@ -27,8 +27,8 @@ public class Buttons
         {
             GlobalVariable.Instance.highscore = GlobalVariable.Instance.score;
             GlobalVariable.Instance.bestname = s;
+            Debug.Log("Lepszy wynik nadpisany");
         }
-
         Debug.Log("Zapisane");
     }
 }

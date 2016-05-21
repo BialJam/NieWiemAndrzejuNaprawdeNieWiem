@@ -631,6 +631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mySkin: {fileID: 11400000, guid: 11191657d3533d54faf50d50f4b62af6, type: 2}
+  inputfield: {fileID: 202107658}
 --- !u!4 &1687626703
 Transform:
   m_ObjectHideFlags: 0
