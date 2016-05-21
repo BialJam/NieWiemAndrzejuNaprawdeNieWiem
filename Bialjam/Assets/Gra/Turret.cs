@@ -12,6 +12,7 @@ public class Turret : MonoBehaviour {
 	public double shootExhaust = 100.0f; // seconds
 	private double nextShoot = 0.0f; //internal
 	void Start () {
+		Player = GameObject.Find ("Player 1");
 	}
 	
 	// Update is called once per frame
