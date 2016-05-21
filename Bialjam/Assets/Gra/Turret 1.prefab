@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 490008}
   - 212: {fileID: 21225762}
   - 95: {fileID: 9590528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Turret Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 114: {fileID: 11437336}
   - 50: {fileID: 5036370}
   - 58: {fileID: 5858268}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Turret 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 428300}
   - 212: {fileID: 21200064}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 469736}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bullet Spawning Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: -0.517, z: 0}
+  m_LocalPosition: {x: -0.3, y: -1.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 490008}
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_Mass: 1000000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -143,7 +143,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: -0.04, y: -0.02}
   serializedVersion: 2
@@ -157,7 +157,7 @@ Animator:
   m_GameObject: {fileID: 130296}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aac293f0e40704e329a6d1bb679d3362, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -18,7 +18,7 @@ public class Turret : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if ((double)Time.time > nextShoot ) {
-			//Shoot ();
+			Shoot ();
 			nextShoot = Time.time + shootExhaust; 
 		}
 
@@ -29,7 +29,8 @@ public class Turret : MonoBehaviour {
 	void Shoot() {
 		GameObject Temporary_Bullet_Handler;
 		Vector2 Direction = Player.transform.position - BulletSpawningPoint.transform.position;
-		Temporary_Bullet_Handler = Instantiate(Bullet,(Vector2)BulletSpawningPoint.transform.position,BulletSpawningPoint.transform.rotation) as GameObject;
+		Direction.Normalize ();
+		Temporary_Bullet_Handler = Instantiate(Bullet,GetComponent<Collider2D>().transform.position,transform.rotation) as GameObject;
 		//Sometimes bullets may appear rotated incorrectly due to the way its pivot was set from the original modeling package.
 		//This is EASILY corrected here, you might have to rotate it from a different axis and or angle based on your particular mesh.
 
@@ -41,6 +42,7 @@ public class Turret : MonoBehaviour {
 		Temporary_RigidBody.AddForce(Direction * BulletForwardForce);
 		Destroy (Temporary_Bullet_Handler, 10.0f); // destruct after 10 seconds
 	}
+
 	void LookAt(GameObject target) {
 		//transform.Rotate (Vector3.up * 90);
 		Vector3 object_pos = Camera.main.WorldToScreenPoint(transform.position), pos = Camera.main.WorldToScreenPoint(target.transform.position);

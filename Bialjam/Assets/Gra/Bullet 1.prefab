@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11431598}
   - 50: {fileID: 5064422}
   - 61: {fileID: 6136752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 4: {fileID: 403886}
   - 212: {fileID: 21248168}
   - 95: {fileID: 9599998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
