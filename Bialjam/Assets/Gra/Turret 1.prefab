@@ -157,7 +157,7 @@ Animator:
   m_GameObject: {fileID: 130296}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: baef11d15b8cd48dfa02f284cbd1b9ea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -187,7 +187,6 @@ MonoBehaviour:
   RU: {fileID: 21300000, guid: cda29fb6b028a464a9ab5285ead6cdcc, type: 3}
   RC: {fileID: 21300002, guid: cda29fb6b028a464a9ab5285ead6cdcc, type: 3}
   RD: {fileID: 21300004, guid: cda29fb6b028a464a9ab5285ead6cdcc, type: 3}
-  BulletForwardForce: 400
   shootExhaust: 1
 --- !u!212 &21200064
 SpriteRenderer:
@@ -213,7 +212,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1533355285
+  m_SortingLayerID: -971076445
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cda29fb6b028a464a9ab5285ead6cdcc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

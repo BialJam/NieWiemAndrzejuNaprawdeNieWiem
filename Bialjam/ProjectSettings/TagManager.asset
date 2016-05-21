@@ -53,6 +53,9 @@ TagManager:
   - name: Passable Bullet
     uniqueID: 3163772443
     locked: 0
+  - name: Enemy Front
+    uniqueID: 3323890851
+    locked: 0
   - name: Pause Menu
     uniqueID: 2365091351
     locked: 0
