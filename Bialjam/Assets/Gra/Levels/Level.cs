@@ -11,7 +11,7 @@ public class Level : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        GlobalVariable.Instance.level++;
     }
 
     // Update is called once per frame
