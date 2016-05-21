@@ -50,13 +50,14 @@ public class Bullet : MonoBehaviour
 				if (coll.gameObject != Shooter) {
 					GlobalVariable.Instance.score += 100;
 					Destroy (coll.gameObject); // enemy dies
+					GlobalVariable.Instance.enemies--;
 				}
 				Destroy (gameObject);	  // bullet does as well
 			} else if (coll.gameObject.layer == 13) { // platform
 				Destroy (gameObject);
 			}else if (coll.gameObject.layer == 8) { // bullets destroy each other
-				Destroy (gameObject);
-				Destroy (coll.gameObject);
+				//Destroy (gameObject);
+				//Destroy (coll.gameObject);
 			}
 		}
 	}

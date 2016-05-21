@@ -48,7 +48,7 @@ public class Level : MonoBehaviour
             Time.timeScale = 0;
             Buttons.LosedGame();
         }
-        if (enemies == 0)
+        if (enemies <= 0)
         {
             GlobalVariable.Instance.score += GlobalVariable.Instance.playerHealth * 10;
             GlobalVariable.Instance.ChangePlayerHealth(25);
