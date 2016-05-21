@@ -30,7 +30,7 @@ public class Turret : MonoBehaviour {
 			nextShoot = Time.time + shootExhaust; 
 		}
 		if ((double)Time.time > nextRandom ) {
-			if (Random.Range (0, 100) >= 0) {
+			if (Random.Range (0, 100) >= 90) {
 				aura = true;
 				usunAure = Time.time + auraExhaust;
 				Aura.SetActive(true);
