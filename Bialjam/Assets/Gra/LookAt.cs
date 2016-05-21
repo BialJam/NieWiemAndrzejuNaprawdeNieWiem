@@ -13,15 +13,21 @@ public class LookAt : MonoBehaviour {
 		//target = GameObject.Find ("Me");
 		//transform.LookAt (target.transform);
 		transform.Rotate (Vector3.up * 90);
-		Vector3 mouse_pos, object_pos;
+		Vector3 object_pos, player_pos;
 		float angle;
-		mouse_pos = Input.mousePosition;
+		player_pos = Camera.main.WorldToScreenPoint(GameObject.Find ("Player_1").transform.position);
 		object_pos = Camera.main.WorldToScreenPoint(transform.position);
-		angle = Mathf.Atan2(mouse_pos.y - object_pos.y, mouse_pos.x - object_pos.x) * Mathf.Rad2Deg + 180;
+		angle = Mathf.Atan2(player_pos.y - object_pos.y, player_pos.x - object_pos.x) * Mathf.Rad2Deg + 180;
 		if (angle % 60 > 30)
 			angle += 60;
 		angle -= angle % 60;
-		transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+		int x = 360;
+		int y = 0;
+		if( angle < 90 || angle > 270 ){
+			y = 180;
+			x = 180;
+		}
+		transform.rotation = Quaternion.Euler(new Vector3(x, y, angle));
 
 	}
 }
