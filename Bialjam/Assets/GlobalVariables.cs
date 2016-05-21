@@ -11,6 +11,7 @@ public class GlobalVariable
     public int highscore = 0;
     public string bestname = "-";
     public int level;
+    public int playerHealth = 100;
 
     private static GlobalVariable instance;
     public static GlobalVariable Instance
@@ -23,5 +24,17 @@ public class GlobalVariable
             }
             return instance;
         }
+    }
+    public void SetPlayerHealth(int health)
+    {
+        playerHealth = health;
+    }
+    public void ChangePlayerHealth(int health)
+    {
+        playerHealth += health;
+    }
+    public int GetPlayerHealth()
+    {
+        return playerHealth;
     }
 }
