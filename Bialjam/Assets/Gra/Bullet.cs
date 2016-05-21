@@ -40,6 +40,8 @@ public class Bullet : MonoBehaviour
 			} else if (coll.gameObject.layer == 9) { // enemy
 				Destroy (coll.gameObject); // enemy dies
 				Destroy (gameObject);	  // bullet does as well
+			} else if (coll.gameObject.layer == 13) { // platform
+				Destroy (gameObject);
 			}
 		}
 	}
