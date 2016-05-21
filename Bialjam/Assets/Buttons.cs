@@ -5,15 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class Buttons
 {
-    public static void StartGame()
-    {
-        Time.timeScale = 1;
-        GlobalVariable.Instance.level = 0;
-        GlobalVariable.Instance.SetPlayerHealth(100);
-        GlobalVariable.Instance.score = 0;
-        Debug.Log("Gra wystartowala");
-        SceneManager.LoadScene("Level 1");
-    }
+	public static void StartGame()
+	{
+		Time.timeScale = 1;
+		GlobalVariable.Instance.level = 0;
+		GlobalVariable.Instance.SetPlayerHealth(100);
+		GlobalVariable.Instance.score = 0;
+		//Debug.Log("Gra wystartowala");
+		SceneManager.LoadScene("Level 1");
+	}
+	public static void RetryLevel()
+	{
+		Time.timeScale = 1;
+		GlobalVariable.Instance.SetPlayerHealth(100);
+		GlobalVariable.Instance.score = GlobalVariable.Instance.startLevelScore;
+		//Debug.Log("Gra wystartowala");
+		SceneManager.LoadScene("Level " + GlobalVariable.Instance.level);
+	}
     public static void ExitGame()
     {
         Debug.Log("Wyszedlem z gry");

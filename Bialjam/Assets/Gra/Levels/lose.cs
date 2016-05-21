@@ -32,10 +32,16 @@ public class lose : MonoBehaviour
         {
             Buttons.SaveScore(inputfield.text);
         }
-        if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 24 * siz, 128 * siz, 32 * siz), "Start new game"))
-        {
-            Buttons.StartGame();
-        }
+		if (GlobalVariable.Instance.hardcore) {
+			if (GUI.Button (new Rect (Screen.width / 2 - 64 * siz, Screen.height / 2 + 24 * siz, 128 * siz, 32 * siz), "Start new game")) {
+				Buttons.StartGame ();
+			}
+		} else {
+			if (GUI.Button (new Rect (Screen.width / 2 - 64 * siz, Screen.height / 2 + 24 * siz, 128 * siz, 32 * siz), "Retry Level")) {
+				Buttons.RetryLevel ();
+			}
+		}
+        
         if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 60 * siz, 128 * siz, 32 * siz), "Menu"))
         {
             SceneManager.LoadScene("Menu");
