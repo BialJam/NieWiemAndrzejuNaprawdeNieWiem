@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Gra/Levels/Level 2.unity
   - enabled: 1
     path: Assets/Options/Options.unity
+  - enabled: 1
+    path: Assets/Gra/Levels/Lose.unity

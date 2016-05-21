@@ -13,11 +13,14 @@ public class Level : MonoBehaviour
     {
         GlobalVariable.Instance.level++;
         GlobalVariable.Instance.SetPlayerHealth(100);
+        Time.timeScale = 1;
+        paused = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        GlobalVariable.Instance.ChangePlayerHealth(-1);
         if (Input.GetKey("escape"))
         {
             if (!paused)
@@ -34,6 +37,7 @@ public class Level : MonoBehaviour
         if (DateTime.Now.Second % 5 == 0 && DateTime.Now.Millisecond < 10) GlobalVariable.Instance.score += 5 ;
         if (GlobalVariable.Instance.GetPlayerHealth()<=0 )
         {
+            Time.timeScale = 0;
             Buttons.LosedGame();
         }
     }
