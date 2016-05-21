@@ -1,9 +1,16 @@
 fileFormatVersion: 2
 guid: c00e8098c4abe9848b27a0939c455086
-timeCreated: 1463772994
+timeCreated: 1463813774
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: postac_w_miejscu_32_v2_0
+    21300002: postac_w_miejscu_32_v2_1
+    21300004: postac_w_miejscu_32_v2_2
+    21300006: postac_w_miejscu_32_v2_3
+    21300008: postac_w_miejscu_32_v2_4
+    21300010: postac_w_miejscu_32_v2_5
+    21300012: postac_w_miejscu_32_v2_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,8 +36,8 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +45,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +56,140 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: postac_w_miejscu_32_v2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
+    - name: postac_w_miejscu_32_v2_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
+    - name: postac_w_miejscu_32_v2_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
+    - name: postac_w_miejscu_32_v2_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
+    - name: postac_w_miejscu_32_v2_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
+    - name: postac_w_miejscu_32_v2_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
+    - name: postac_w_miejscu_32_v2_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
     outline: []
   spritePackingTag: 
   userData: 
