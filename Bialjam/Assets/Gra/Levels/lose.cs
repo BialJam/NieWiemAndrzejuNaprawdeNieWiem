@@ -26,6 +26,7 @@ public class lose : MonoBehaviour
     {
         GUI.skin = mySkin;
         int siz = GlobalVariable.Instance.buttonSize;
+        GUI.Label(new Rect(Screen.width / 2 - 256, 0, 512, 128), "Best player: " + GlobalVariable.Instance.bestname + " | " + GlobalVariable.Instance.highscore);
         GUI.Label(new Rect(Screen.width / 2 - 256, Screen.height / 2 - 235, 512, 128), "Your score: " + GlobalVariable.Instance.score);
         if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 12 * siz, 128 * siz, 32 * siz), "Save score"))
         {
