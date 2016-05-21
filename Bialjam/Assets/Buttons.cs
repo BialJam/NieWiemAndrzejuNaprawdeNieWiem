@@ -31,4 +31,8 @@ public class Buttons
         }
         Debug.Log("Zapisane");
     }
+    public static void LosedGame()
+    {
+        SceneManager.LoadScene("Lose");
+    }
 }

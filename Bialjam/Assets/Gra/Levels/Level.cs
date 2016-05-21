@@ -12,6 +12,7 @@ public class Level : MonoBehaviour
     void Start()
     {
         GlobalVariable.Instance.level++;
+        GlobalVariable.Instance.SetPlayerHealth(100);
     }
 
     // Update is called once per frame
@@ -31,6 +32,10 @@ public class Level : MonoBehaviour
             }
         }
         if (DateTime.Now.Second % 5 == 0 && DateTime.Now.Millisecond < 10) GlobalVariable.Instance.score += 5 ;
+        if (GlobalVariable.Instance.GetPlayerHealth()<=0 )
+        {
+            Buttons.LosedGame();
+        }
     }
 
     void OnGUI()
