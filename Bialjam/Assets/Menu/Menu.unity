@@ -282,4 +282,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfdc32aa1a40ffd42bee67a088eba830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FPS: 60
+  FPS: 100
