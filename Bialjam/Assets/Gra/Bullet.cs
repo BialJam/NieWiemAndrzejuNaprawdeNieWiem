@@ -34,6 +34,7 @@ public class Bullet : MonoBehaviour
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
 			GetComponent<Rigidbody2D> ().AddForce (Quaternion.Euler(0, 0, 45)*-gameObject.transform.right* GlobalVariable.Instance.BulletForwardForce);
 			Destroy (gameObject, 10.0f);
+            GlobalVariable.Instance.playerHealth -= 5;
 		}
 	}
 }
