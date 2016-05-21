@@ -7,24 +7,29 @@ public class Turret : MonoBehaviour {
 	public GameObject BulletSpawningPoint;
 	public GameObject TurretBody;
 	public GameObject Player;
+	public SpriteRenderer Eye;
+	public Sprite LU, LC, LD, RU, RC, RD;
 	public float BulletForwardForce = 1.0f;
 	public double shootExhaust = 100.0f; // seconds
 	private double nextShoot = 0.0f; //internal
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if ((double)Time.time > nextShoot ) {
-			Shoot ();
+			//Shoot ();
 			nextShoot = Time.time + shootExhaust; 
 		}
+
+		//LookAt (Player.transform.position);
+		LookAt (Player);
 	}
 
 	void Shoot() {
 		GameObject Temporary_Bullet_Handler;
-		Temporary_Bullet_Handler = Instantiate(Bullet,BulletSpawningPoint.transform.position,BulletSpawningPoint.transform.rotation) as GameObject;
+		Vector2 Direction = Player.transform.position - BulletSpawningPoint.transform.position;
+		Temporary_Bullet_Handler = Instantiate(Bullet,(Vector2)BulletSpawningPoint.transform.position,BulletSpawningPoint.transform.rotation) as GameObject;
 		//Sometimes bullets may appear rotated incorrectly due to the way its pivot was set from the original modeling package.
 		//This is EASILY corrected here, you might have to rotate it from a different axis and or angle based on your particular mesh.
 
@@ -33,7 +38,29 @@ public class Turret : MonoBehaviour {
 		//Retrieve the Rigidbody component from the instantiated Bullet and control it.
 		Rigidbody2D Temporary_RigidBody;
 		Temporary_RigidBody = Temporary_Bullet_Handler.GetComponent<Rigidbody2D>();
-		Temporary_RigidBody.AddForce((Player.transform.position - BulletSpawningPoint.transform.position) * BulletForwardForce);
+		Temporary_RigidBody.AddForce(Direction * BulletForwardForce);
 		Destroy (Temporary_Bullet_Handler, 10.0f); // destruct after 10 seconds
+	}
+	void LookAt(GameObject target) {
+		//transform.Rotate (Vector3.up * 90);
+		Vector3 object_pos = Camera.main.WorldToScreenPoint(transform.position), pos = Camera.main.WorldToScreenPoint(target.transform.position);
+		float angle = Mathf.Atan2 (pos.y - object_pos.y, pos.x - object_pos.x) * Mathf.Rad2Deg + 180; 
+		/* + 360 - Quaternion.Angle(Quaternion.identity, transform.rotation);
+		angle %= 360;*/
+		if (angle % 60 > 30)
+			angle += 60;
+		angle -= angle % 60;
+		if (angle < 15 || angle >= 315)
+			Eye.sprite = LC;
+		else if (angle < 75)
+			Eye.sprite = LD;
+		else if (angle < 135)
+			Eye.sprite = RD;
+		else if (angle < 195)
+			Eye.sprite = RC;
+		else if (angle < 255)
+			Eye.sprite = RU;
+		else if (angle < 315)
+			Eye.sprite = LU;
 	}
 }
