@@ -24,7 +24,7 @@ public class Level : MonoBehaviour
     {
         if (Time.timeScale==1)
         {
-            if (DateTime.Now.Second % 5 == 0 && DateTime.Now.Millisecond < 300) GlobalVariable.Instance.score += 5;
+            if (DateTime.Now.Second % 5 == 0 && DateTime.Now.Millisecond < 50) GlobalVariable.Instance.score += 5;
         }
         if (Input.GetKey("escape"))
         {

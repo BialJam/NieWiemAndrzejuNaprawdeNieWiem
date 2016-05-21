@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class FpsLimiter : MonoBehaviour {
-    public int FPS = 60;
+    public int FPS;
 	// Use this for initialization
 	void Start () {
         QualitySettings.vSyncCount = 0;
