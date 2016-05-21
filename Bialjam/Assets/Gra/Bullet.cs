@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject BulletBody;
+	public GameObject BulletBody;
+	public GameObject Shooter;
     void Start()
     {
     }
@@ -12,6 +13,13 @@ public class Bullet : MonoBehaviour
     void Update()
     {
     }
+
+	void SetShooter(GameObject s) {
+		Shooter = s;
+	}
+	void SetShooterForBullet(GameObject s) {
+		s.SendMessage ("SetShooter", Shooter);
+	}
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
@@ -27,7 +35,6 @@ public class Bullet : MonoBehaviour
 				//Retrieve the Rigidbody component from the instantiated Bullet and control it.
 				Rigidbody2D Temporary_RigidBody;
 				Temporary_RigidBody = Temporary_Bullet_Handler.GetComponent<Rigidbody2D> ();
-				//Temporary_RigidBody.AddForce(Direction * Vector2.right * 90 * BulletForwardForce);
 				Destroy (Temporary_Bullet_Handler, 10.0f); // destruct after 10 seconds
 				Temporary_RigidBody.AddForce (Quaternion.Euler (0, 0, -45) * -gameObject.transform.right * GlobalVariable.Instance.BulletForwardForce);
 				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
@@ -37,8 +44,11 @@ public class Bullet : MonoBehaviour
 				transform.RotateAround (rot, Mathf.Deg2Rad * 45);
 				Temporary_Bullet_Handler.transform.RotateAround (rot, Mathf.Deg2Rad * -45);
 				GlobalVariable.Instance.playerHealth -= 5;
+
+				Temporary_Bullet_Handler.SendMessage ("SetShooter", Shooter);
 			} else if (coll.gameObject.layer == 9) { // enemy
-				Destroy (coll.gameObject); // enemy dies
+				if (coll.gameObject != Shooter)
+					Destroy (coll.gameObject); // enemy dies
 				Destroy (gameObject);	  // bullet does as well
 			} else if (coll.gameObject.layer == 13) { // platform
 				Destroy (gameObject);
