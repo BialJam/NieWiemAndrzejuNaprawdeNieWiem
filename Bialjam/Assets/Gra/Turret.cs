@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class Turret : MonoBehaviour {
-	//private const bool shoot_speed;
 	public GameObject Bullet;
 	public GameObject BulletSpawningPoint;
 	public GameObject TurretBody;
@@ -10,7 +9,6 @@ public class Turret : MonoBehaviour {
 	public SpriteRenderer Eye;
 	public GameObject Aura;
 	public Sprite LU, LC, LD, RU, RC, RD;
-	public double shootExhaust;
 	public double randomExhaust = 5f;
 	private double auraExhaust = 10f;
 	public bool aura = false;
@@ -27,7 +25,7 @@ public class Turret : MonoBehaviour {
 	void Update () {
 		if ((double)Time.time > nextShoot ) {
 			Shoot ();
-			nextShoot = Time.time + shootExhaust; 
+			nextShoot = Time.time + Random.Range (2.0f, 4.0f); 
 		}
 		if ((double)Time.time > nextRandom ) {
 			if (Random.Range (0, 100) >= 90) {
@@ -106,7 +104,7 @@ public class Turret : MonoBehaviour {
 	}
 	void OnDamage() {
 		if (aura) {
-			GlobalVariable.Instance.playerHealth += 50;
+			GlobalVariable.Instance.ChangePlayerHealth(50);
 		}
 	}
 }
