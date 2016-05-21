@@ -80,7 +80,15 @@ public class Level : MonoBehaviour
                 pauseBackground.SetActive(false);
                 paused = false;
                 Time.timeScale = 1;
-                SceneManager.LoadScene("Level " + level);
+                if (!GlobalVariable.Instance.hardcore)
+                    SceneManager.LoadScene("Level " + level);
+                else
+                {
+                    SceneManager.LoadScene("Level 1");
+                    GlobalVariable.Instance.score = 0;
+                    GlobalVariable.Instance.playerHealth = 100;
+                }
+                    
             }
             if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 26 * siz, 128 * siz, 32 * siz), "Exit"))
             {
