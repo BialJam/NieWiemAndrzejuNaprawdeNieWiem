@@ -16,7 +16,8 @@ public class Level : MonoBehaviour
     {
         Time.timeScale = 1;
         paused = false;
-        pauseBackground.SetActive(false);
+		pauseBackground.SetActive(false);
+		GlobalVariable.Instance.startLevelScore = GlobalVariable.Instance.score;
         GlobalVariable.Instance.score = Mathf.Max(0, GlobalVariable.Instance.score - 150);
         GlobalVariable.Instance.playerHealth = 100;
         GlobalVariable.Instance.level = level;
@@ -75,17 +76,14 @@ public class Level : MonoBehaviour
                 paused = false;
                 Time.timeScale = 1;
             }
-            if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 16 * siz, 128 * siz, 32 * siz), "Reset level"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 16 * siz, 128 * siz, 32 * siz), "Retry Level"))
             {
                 pauseBackground.SetActive(false);
                 paused = false;
                 Time.timeScale = 1;
-                if (!GlobalVariable.Instance.hardcore)
-                    SceneManager.LoadScene("Level " + level);
-                else
-                {
-                    SceneManager.LoadScene("Level 1");
-                    GlobalVariable.Instance.score = 0;
+                SceneManager.LoadScene("Level " + level);
+				if (!GlobalVariable.Instance.hardcore) {
+					GlobalVariable.Instance.score = GlobalVariable.Instance.startLevelScore;
                     GlobalVariable.Instance.playerHealth = 100;
                 }
                     

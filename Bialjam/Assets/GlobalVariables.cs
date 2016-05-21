@@ -7,7 +7,8 @@ public class GlobalVariable
     public int buttonSize = 2;
 
     // game variables
-    public int score;
+	public int score;
+	public int startLevelScore = 0;
     public int highscore = 0;
     public string bestname = "-";
     public int level;
