@@ -44,6 +44,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485386}
   - 212: {fileID: 21245734}
+  - 95: {fileID: 9509594}
   m_Layer: 0
   m_Name: Aura
   m_TagString: Untagged
@@ -177,6 +178,23 @@ CircleCollider2D:
   m_Offset: {x: -0.04, y: -0.02}
   serializedVersion: 2
   m_Radius: 0.51750517
+--- !u!95 &9509594
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175972}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 275e0dc660ce3442c8902b131d79fdcb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9590528
 Animator:
   serializedVersion: 3
@@ -186,7 +204,7 @@ Animator:
   m_GameObject: {fileID: 130296}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 04ddb2ee2b3ec4cb3bd6280f47b55940, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -217,7 +235,6 @@ MonoBehaviour:
   RU: {fileID: 21300000, guid: cda29fb6b028a464a9ab5285ead6cdcc, type: 3}
   RC: {fileID: 21300002, guid: cda29fb6b028a464a9ab5285ead6cdcc, type: 3}
   RD: {fileID: 21300004, guid: cda29fb6b028a464a9ab5285ead6cdcc, type: 3}
-  shootExhaust: 1
   randomExhaust: 5
   aura: 0
 --- !u!212 &21200064
