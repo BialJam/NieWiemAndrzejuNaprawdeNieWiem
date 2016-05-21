@@ -82,7 +82,7 @@ public class Level : MonoBehaviour
                 paused = false;
                 Time.timeScale = 1;
                 SceneManager.LoadScene("Level " + level);
-				if (!GlobalVariable.Instance.hardcore)
+				if (!GlobalVariable.Instance.hardcore) {
 					GlobalVariable.Instance.score = GlobalVariable.Instance.startLevelScore;
                     GlobalVariable.Instance.playerHealth = 100;
                 }
