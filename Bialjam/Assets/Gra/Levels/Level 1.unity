@@ -696,6 +696,7 @@ MonoBehaviour:
   pauseBackground: {fileID: 2033933360}
   mySkin: {fileID: 11400000, guid: 11191657d3533d54faf50d50f4b62af6, type: 2}
   enemies: 2
+  level: 1
 --- !u!4 &1749473267
 Transform:
   m_ObjectHideFlags: 0

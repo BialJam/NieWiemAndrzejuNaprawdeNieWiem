@@ -18,7 +18,7 @@ public class Level : MonoBehaviour
         paused = false;
         pauseBackground.SetActive(false);
         GlobalVariable.Instance.level = level;
-        GlobalVariable.Instance.SetEnemiesCount(enemies);
+        GlobalVariable.Instance.enemies = enemies;
     }
 
     // Update is called once per frame
@@ -52,9 +52,12 @@ public class Level : MonoBehaviour
         }
         if (GlobalVariable.Instance.enemies <= 0)
         {
+            Thread.Sleep(150);
             GlobalVariable.Instance.score += GlobalVariable.Instance.playerHealth * 10;
             GlobalVariable.Instance.SetPlayerHealth(100);
-            SceneManager.LoadScene("Level " + ++GlobalVariable.Instance.level);
+            level++;
+            Debug.Log("laduje " + level);
+            SceneManager.LoadScene("Level " + level);
         }
     }
 
