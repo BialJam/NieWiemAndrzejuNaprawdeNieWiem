@@ -16,7 +16,7 @@ public class Turret : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.time > nextShoot ) {
+		if ((double)Time.time > nextShoot ) {
 			Shoot ();
 			nextShoot = Time.time + shootExhaust; 
 		}
@@ -33,8 +33,7 @@ public class Turret : MonoBehaviour {
 		//Retrieve the Rigidbody component from the instantiated Bullet and control it.
 		Rigidbody2D Temporary_RigidBody;
 		Temporary_RigidBody = Temporary_Bullet_Handler.GetComponent<Rigidbody2D>();
-
-		Temporary_RigidBody.AddForce((Player.transform.position - transform.position - BulletSpawningPoint.transform.position) * 20);
+		Temporary_RigidBody.AddForce((Player.transform.position - BulletSpawningPoint.transform.position) * BulletForwardForce);
 		Destroy (Temporary_Bullet_Handler, 10.0f); // destruct after 10 seconds
 	}
 }

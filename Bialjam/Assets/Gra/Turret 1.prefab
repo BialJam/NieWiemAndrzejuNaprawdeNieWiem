@@ -70,7 +70,7 @@ Transform:
   m_GameObject: {fileID: 130296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 499514}
   m_RootOrder: 0
@@ -81,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.53, y: -0.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 490008}
@@ -119,11 +119,14 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: 0.95105654, y: 0.30901697}
-      - {x: 0.5877852, y: -0.80901706}
-      - {x: -0.58778536, y: -0.80901694}
-      - {x: -0.9510565, y: 0.30901712}
+    - - {x: -0.24557543, y: 0.61046624}
+      - {x: 0.15951347, y: 0.59719086}
+      - {x: 0.43490648, y: 0.12210989}
+      - {x: 0.41523075, y: -0.26846218}
+      - {x: 0.1593318, y: -0.639011}
+      - {x: -0.20038557, y: -0.6397222}
+      - {x: -0.5558717, y: -0.3263048}
+      - {x: -0.64364004, y: 0.022889376}
 --- !u!95 &9590528
 Animator:
   serializedVersion: 3
@@ -157,7 +160,7 @@ MonoBehaviour:
   TurretBody: {fileID: 130296}
   Player: {fileID: 0}
   BulletForwardForce: 1
-  shootExhaust: 100
+  shootExhaust: 1
 --- !u!212 &21225762
 SpriteRenderer:
   m_ObjectHideFlags: 1
