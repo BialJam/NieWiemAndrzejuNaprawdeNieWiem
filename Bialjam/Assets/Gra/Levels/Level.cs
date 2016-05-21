@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using System;
+using System.Threading;
 
 public class Level : MonoBehaviour
 {
@@ -32,12 +33,14 @@ public class Level : MonoBehaviour
                 pauseBackground.SetActive(true);
                 paused = true;
                 Time.timeScale = 0;
+                Thread.Sleep(100);
             }
             else
             {
                 pauseBackground.SetActive(false);
                 paused = false;
                 Time.timeScale = 1;
+                Thread.Sleep(100);
             }
         }
         if (GlobalVariable.Instance.GetPlayerHealth()<=0 )
