@@ -8,21 +8,43 @@ public class Turret : MonoBehaviour {
 	public GameObject TurretBody;
 	public GameObject Player;
 	public SpriteRenderer Eye;
+	public GameObject Aura;
 	public Sprite LU, LC, LD, RU, RC, RD;
-	public double shootExhaust; // seconds
-	private double nextShoot = 0.0f; //internal
+	public double shootExhaust;
+	public double randomExhaust = 5f;
+	private double auraExhaust = 10f;
+	public bool aura = false;
+	private double nextShoot = 0.0f;
+	private float nextRandom = 0.0f; //internal
+	private double usunAure = 999999999;
 	private bool lewo;
 	void Start () {
 		Player = GameObject.Find ("Player 1");
+		Aura.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if ((double)Time.time > nextShoot ) {
 			Shoot ();
-			nextShoot = Time.time + shootExhaust;
+			nextShoot = Time.time + shootExhaust; 
 		}
-
+		if ((double)Time.time > nextRandom ) {
+			if (Random.Range (0, 100) >= 90) {
+				aura = true;
+				usunAure = Time.time + auraExhaust;
+				Aura.SetActive(true);
+				Debug.Log ("Tworzenie aury");
+			}
+			nextRandom = Time.time + Random.Range(1.5f, 2.5f);
+			Debug.Log ("Los aury");
+		}
+		if (aura && (double)Time.time > usunAure) {
+			usunAure = 999999999;
+			Debug.Log ("Usuniecie aury");
+			aura = false;
+			Aura.SetActive (false);
+		}
 		//LookAt (Player.transform.position);
 		LookAt (Player);
 	}
