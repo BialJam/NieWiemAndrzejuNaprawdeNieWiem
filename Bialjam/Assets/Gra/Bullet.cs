@@ -48,6 +48,7 @@ public class Bullet : MonoBehaviour
 				Temporary_Bullet_Handler.SendMessage ("SetShooter", Shooter);
 			} else if (coll.gameObject.layer == 9) { // enemy
 				if (coll.gameObject != Shooter) {
+					coll.gameObject.SendMessage ("OnDamage");
 					GlobalVariable.Instance.score += 100;
 					Destroy (coll.gameObject); // enemy dies
 					GlobalVariable.Instance.enemies--;
