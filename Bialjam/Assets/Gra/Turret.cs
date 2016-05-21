@@ -25,7 +25,7 @@ public class Turret : MonoBehaviour {
 	void Update () {
 		if ((double)Time.time > nextShoot ) {
 			Shoot ();
-			nextShoot = Time.time + Random.Range (2.0f, 4.0f); 
+			nextShoot = Time.time + Random.Range (2.0f, 2.5f); 
 		}
 		if ((double)Time.time > nextRandom ) {
 			if (Random.Range (0, 100) >= 90) {
