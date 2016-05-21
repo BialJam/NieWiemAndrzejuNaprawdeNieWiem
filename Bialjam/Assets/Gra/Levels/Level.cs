@@ -17,6 +17,8 @@ public class Level : MonoBehaviour
         Time.timeScale = 1;
         paused = false;
         pauseBackground.SetActive(false);
+        GlobalVariable.Instance.score = Mathf.Max(0, GlobalVariable.Instance.score - 150);
+        GlobalVariable.Instance.playerHealth = 100;
         GlobalVariable.Instance.level = level;
         GlobalVariable.Instance.enemies = enemies;
     }
@@ -73,9 +75,12 @@ public class Level : MonoBehaviour
                 paused = false;
                 Time.timeScale = 1;
             }
-            if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 16 * siz, 128 * siz, 32 * siz), "Options"))
+            if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 16 * siz, 128 * siz, 32 * siz), "Reset level"))
             {
-                SceneManager.LoadScene("Options");
+                pauseBackground.SetActive(false);
+                paused = false;
+                Time.timeScale = 1;
+                SceneManager.LoadScene("Level " + level);
             }
             if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 26 * siz, 128 * siz, 32 * siz), "Exit"))
             {
