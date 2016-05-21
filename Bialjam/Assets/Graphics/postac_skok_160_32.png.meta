@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: abdaf989fd5ec4e25955c326c33c4286
-timeCreated: 1463813828
+guid: fac6e0b2154e2421db684cd29881255d
+timeCreated: 1463819566
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: turret_stoi_160_32_0
-    21300002: turret_stoi_160_32_1
-    21300004: turret_stoi_160_32_2
-    21300006: turret_stoi_160_32_3
-    21300008: turret_stoi_160_32_4
+    21300000: postac_skok_160_32_0
+    21300002: postac_skok_160_32_1
+    21300004: postac_skok_160_32_2
+    21300006: postac_skok_160_32_3
+    21300008: postac_skok_160_32_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -55,7 +55,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: turret_stoi_160_32_0
+    - name: postac_skok_160_32_0
       rect:
         serializedVersion: 2
         x: 0
@@ -63,21 +63,18 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 1, y: 16}
-        - {x: 0, y: 15}
-        - {x: 1, y: 13}
-        - {x: -2, y: 16}
-        - {x: -12, y: 16}
-        - {x: -16, y: 7}
-        - {x: -16, y: -16}
-        - {x: 10, y: -16}
-        - {x: 13, y: -8}
-        - {x: 13, y: 9}
-        - {x: 6, y: 16}
-    - name: turret_stoi_160_32_1
+      - - {x: -13, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
+    - name: postac_skok_160_32_1
       rect:
         serializedVersion: 2
         x: 32
@@ -88,20 +85,15 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 7, y: 16}
-        - {x: 1, y: 16}
-        - {x: 0, y: 15}
-        - {x: 1, y: 13}
-        - {x: -2, y: 16}
-        - {x: -9, y: 16}
-        - {x: -16, y: 9}
-        - {x: -16, y: -8}
-        - {x: -15, y: -12}
-        - {x: -8, y: -16}
-        - {x: 7, y: -16}
-        - {x: 13, y: -4}
-        - {x: 13, y: 5}
-    - name: turret_stoi_160_32_2
+      - - {x: -13, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
+    - name: postac_skok_160_32_2
       rect:
         serializedVersion: 2
         x: 64
@@ -112,19 +104,15 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 1, y: 16}
-        - {x: 0, y: 15}
-        - {x: 1, y: 13}
-        - {x: -2, y: 16}
-        - {x: -9, y: 16}
-        - {x: -16, y: 6}
-        - {x: -16, y: -14}
-        - {x: -13, y: -16}
-        - {x: 12, y: -16}
-        - {x: 14, y: -10}
-        - {x: 14, y: 10}
-        - {x: 7, y: 16}
-    - name: turret_stoi_160_32_3
+      - - {x: -13, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
+    - name: postac_skok_160_32_3
       rect:
         serializedVersion: 2
         x: 96
@@ -135,18 +123,15 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 1, y: 16}
-        - {x: 0, y: 15}
-        - {x: 1, y: 13}
-        - {x: -2, y: 16}
-        - {x: -12, y: 16}
-        - {x: -16, y: 7}
-        - {x: -16, y: -16}
-        - {x: 10, y: -16}
-        - {x: 13, y: -8}
-        - {x: 13, y: 9}
-        - {x: 6, y: 16}
-    - name: turret_stoi_160_32_4
+      - - {x: -13, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
+    - name: postac_skok_160_32_4
       rect:
         serializedVersion: 2
         x: 128
@@ -157,17 +142,14 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 1, y: 16}
-        - {x: 0, y: 15}
-        - {x: 1, y: 13}
-        - {x: -2, y: 16}
-        - {x: -12, y: 16}
-        - {x: -16, y: 7}
-        - {x: -16, y: -16}
-        - {x: 10, y: -16}
-        - {x: 13, y: -8}
-        - {x: 13, y: 9}
-        - {x: 6, y: 16}
+      - - {x: -13, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -13}
+        - {x: -15, y: -16}
+        - {x: 15, y: -16}
+        - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 13, y: 16}
     outline: []
   spritePackingTag: 
   userData: 
