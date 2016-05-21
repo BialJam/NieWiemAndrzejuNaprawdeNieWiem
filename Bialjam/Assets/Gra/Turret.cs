@@ -20,7 +20,7 @@ public class Turret : MonoBehaviour {
 	void Update () {
 		if ((double)Time.time > nextShoot ) {
 			Shoot ();
-			nextShoot = Time.time + shootExhaust; 
+			nextShoot = Time.time + shootExhaust;
 		}
 
 		//LookAt (Player.transform.position);
