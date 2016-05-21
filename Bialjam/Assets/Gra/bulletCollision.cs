@@ -15,8 +15,8 @@ public class bulletCollision : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log("colizja");
-        if( coll.gameObject.name == "Player 1")
-            DestroyObject(gameObject);
+		if (coll.gameObject && coll.gameObject.layer == 10) { // Player's layer
+			DestroyObject (gameObject);
+		}
     }
 }
