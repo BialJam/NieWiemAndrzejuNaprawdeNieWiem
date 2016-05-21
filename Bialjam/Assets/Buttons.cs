@@ -17,9 +17,10 @@ public class Buttons
 	public static void RetryLevel()
 	{
 		Time.timeScale = 1;
-		GlobalVariable.Instance.SetPlayerHealth(100);
-		GlobalVariable.Instance.score = GlobalVariable.Instance.startLevelScore;
-		//Debug.Log("Gra wystartowala");
+		if (!GlobalVariable.Instance.hardcore) {
+			GlobalVariable.Instance.SetPlayerHealth (100);
+			GlobalVariable.Instance.score = GlobalVariable.Instance.startLevelScore;
+		}
 		SceneManager.LoadScene("Level " + GlobalVariable.Instance.level);
 	}
     public static void ExitGame()
