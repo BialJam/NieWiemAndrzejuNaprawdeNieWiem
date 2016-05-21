@@ -33,5 +33,19 @@ public class Menu : MonoBehaviour
         {
             Buttons.ExitGame();
         }
+        if (GUI.Button(new Rect(10, Screen.height - 74, 256, 64), "Normal"))
+        {
+            GlobalVariable.Instance.hardcore = false;
+        }
+        if (GUI.Button(new Rect(Screen.width - 266, Screen.height - 74, 256, 64), "Hardcore"))
+        {
+            GlobalVariable.Instance.hardcore = true;
+        }
+        if (!GlobalVariable.Instance.hardcore)
+            GUI.Label(new Rect(Screen.width / 2 - 128, Screen.height - 74, 256, 64), "Normal");
+        else
+
+            GUI.Label(new Rect(Screen.width / 2 - 128, Screen.height - 74, 256, 64), "Hardcore");
+
     }
 }
