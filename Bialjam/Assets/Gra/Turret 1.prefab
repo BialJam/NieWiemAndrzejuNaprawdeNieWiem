@@ -26,8 +26,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 499514}
   - 114: {fileID: 11437336}
-  - 60: {fileID: 6096596}
   - 50: {fileID: 5036370}
+  - 60: {fileID: 6098310}
   m_Layer: 0
   m_Name: Turret 1
   m_TagString: Untagged
@@ -105,7 +105,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &6096596
+--- !u!60 &6098310
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -119,14 +119,11 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -0.24557543, y: 0.61046624}
-      - {x: 0.15951347, y: 0.59719086}
-      - {x: 0.43490648, y: 0.12210989}
-      - {x: 0.41523075, y: -0.26846218}
-      - {x: 0.1593318, y: -0.639011}
-      - {x: -0.20038557, y: -0.6397222}
-      - {x: -0.5558717, y: -0.3263048}
-      - {x: -0.64364004, y: 0.022889376}
+    - - {x: 0, y: 1}
+      - {x: 0.95105654, y: 0.30901697}
+      - {x: 0.5877852, y: -0.80901706}
+      - {x: -0.58778536, y: -0.80901694}
+      - {x: -0.9510565, y: 0.30901712}
 --- !u!95 &9590528
 Animator:
   serializedVersion: 3
