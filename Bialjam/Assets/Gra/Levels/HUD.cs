@@ -16,8 +16,8 @@ public class HUD : MonoBehaviour {
     void OnGUI()
     {
         GUI.skin = mySkin;
-        GUI.Label(new Rect(-50, 10, 256, 64), "Score: " + GlobalVariable.Instance.score);
-        GUI.Label(new Rect(Screen.width - 256, 10, 256, 64), "Level: " + GlobalVariable.Instance.level);
-        GUI.Label(new Rect(Screen.width / 2 - 128, Screen.height-74, 256, 64), "Health: " + GlobalVariable.Instance.playerHealth);
+        GUI.Label(new Rect(5, 5, 256, 40), "Score: " + GlobalVariable.Instance.score);
+        GUI.Label(new Rect(Screen.width - 261, 5, 256, 40), "Level: " + GlobalVariable.Instance.level);
+        GUI.Label(new Rect(Screen.width / 2 - 128, Screen.height-45, 256, 40), "Health: " + GlobalVariable.Instance.playerHealth);
     }
 }

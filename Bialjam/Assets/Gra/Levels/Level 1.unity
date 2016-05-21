@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecbf8b025d73a264caabba89639a7c80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseBackground: {fileID: 2033933360}
   mySkin: {fileID: 11400000, guid: 11191657d3533d54faf50d50f4b62af6, type: 2}
 --- !u!4 &1749473267
 Transform:
