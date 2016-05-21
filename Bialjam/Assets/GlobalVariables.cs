@@ -14,6 +14,7 @@ public class GlobalVariable
 	public int playerHealth = 100;
     public int enemies;
 	public float BulletForwardForce = .04f;
+    public bool hardcore = false;
 
     private static GlobalVariable instance;
     public static GlobalVariable Instance
