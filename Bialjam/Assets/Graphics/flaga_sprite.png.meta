@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: 89b0bd0ded0004aaab1b0813b2f1b959
-timeCreated: 1463912813
+guid: 9665ab7ba7da03940a614d4a278e2a02
+timeCreated: 1463915508
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: bum_turret_16_64_0
-    21300002: bum_turret_16_64_1
-    21300004: bum_turret_16_64_2
-    21300006: bum_turret_16_64_3
+    21300000: flaga_sprite_0
+    21300002: flaga_sprite_1
+    21300004: flaga_sprite_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -54,50 +53,65 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: bum_turret_16_64_0
+    - name: flaga_sprite_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: bum_turret_16_64_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: bum_turret_16_64_2
+      outline:
+      - - {x: -4, y: 68}
+        - {x: -9, y: 67}
+        - {x: -10, y: 53}
+        - {x: -10, y: 4}
+        - {x: -4, y: -61}
+        - {x: 2, y: -71}
+        - {x: 16, y: -71}
+        - {x: 16, y: 47}
+        - {x: 9, y: 68}
+    - name: flaga_sprite_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: bum_turret_16_64_3
+      outline:
+      - - {x: -7, y: 68}
+        - {x: -9, y: 67}
+        - {x: -11, y: 65}
+        - {x: -11, y: -63}
+        - {x: -6, y: -71}
+        - {x: 14, y: -71}
+        - {x: 14, y: 66}
+        - {x: 13, y: 68}
+    - name: flaga_sprite_2
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -5, y: 68}
+        - {x: -10, y: 65}
+        - {x: -16, y: 42}
+        - {x: -16, y: -71}
+        - {x: -1, y: -71}
+        - {x: 10, y: -55}
+        - {x: 11, y: -24}
+        - {x: 11, y: 61}
+        - {x: 9, y: 68}
     outline: []
   spritePackingTag: 
   userData: 
