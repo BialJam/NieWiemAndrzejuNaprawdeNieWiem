@@ -16,7 +16,7 @@ public class Turret : MonoBehaviour {
 	private float nextRandom = 0.0f; //internal
 	private double usunAure = 999999999;
 	private bool lewo;
-    public AudioClip ShootSound;
+    public AudioClip ShootSound, DeadSound;
 	void Start () {
 		Player = GameObject.Find ("Player 1");
 		Aura.SetActive (false);
@@ -102,7 +102,7 @@ public class Turret : MonoBehaviour {
 		}
 	}
 	void OnDamage() {
-		if (aura) {
+        if (aura) {
 			GlobalVariable.Instance.ChangePlayerHealth(50);
 		}
 	}
