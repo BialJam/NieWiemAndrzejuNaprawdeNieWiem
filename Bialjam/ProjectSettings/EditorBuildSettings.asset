@@ -25,3 +25,5 @@ EditorBuildSettings:
     path: Assets/Gra/Levels/Lose.unity
   - enabled: 1
     path: Assets/Gra/Levels/Win.unity
+  - enabled: 1
+    path: Assets/Menu/Credits.unity
