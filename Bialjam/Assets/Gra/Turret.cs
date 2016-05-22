@@ -32,14 +32,11 @@ public class Turret : MonoBehaviour {
 				aura = true;
 				usunAure = Time.time + auraExhaust;
 				Aura.SetActive(true);
-				Debug.Log ("Tworzenie aury");
 			}
 			nextRandom = Time.time + Random.Range(1.5f, 2.5f);
-			Debug.Log ("Los aury");
 		}
 		if (aura && (double)Time.time > usunAure) {
 			usunAure = 999999999;
-			Debug.Log ("Usuniecie aury");
 			aura = false;
 			Aura.SetActive (false);
 		}

@@ -31,17 +31,14 @@ public class Movement : MonoBehaviour {
 		if (Input.GetAxis ("Horizontal") < 0) {
 			transform.Translate (Vector3.right * -1 * speed * Time.deltaTime);
 			transform.eulerAngles = new Vector3 (360, 0, 360);
-			Debug.Log ("lewo");
 		}
 		if (Input.GetAxis ("Horizontal") > 0) {
 			transform.Translate (Vector3.right * -1 * speed * Time.deltaTime);
 			transform.eulerAngles = new Vector3 (360, 180, 360);
-			Debug.Log ("prawo");
 		}
 		if (Input.GetKeyDown (KeyCode.Space) && (OnGround || jumped == 1)) {
 			anim.SetTrigger ("Jump");
 			GetComponent<Rigidbody2D> ().AddForce (new Vector2(0,JumpForce));
-			Debug.Log ("jump");
 			jumped ++;
 			JumpForce = 0.1f;
 			JumpTime = Mathf.Max(JumpDelay, JumpTime + JumpDelay);
