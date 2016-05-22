@@ -36,7 +36,7 @@ public class Options : MonoBehaviour
 				LightManager.Instance.SetLights (true);
 			}
         }
-		if (GUI.Button(new Rect(Screen.width / 2 - 128, Screen.height / 2 - 32, 256, 64), "Music: " + MusicManager.Instance.GetTrackTitle()))
+		if (GUI.Button(new Rect(Screen.width / 2 - 150, Screen.height / 2 - 32, 300, 64), MusicManager.Instance.GetTrackTitle()))
 		{
 			MusicManager.Instance.PlayNextTrack();
         }
