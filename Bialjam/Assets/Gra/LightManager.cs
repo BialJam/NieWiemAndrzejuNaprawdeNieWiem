@@ -7,13 +7,17 @@ public class LightManager {
 	public bool IsOn = true;
 	// Use this for initialization
 	public void UpdateLights() {
+		bool lightOn = IsOn;
+		if (!Application.loadedLevelName.StartsWith ("Level"))
+			lightOn = false;
+		
 		GameObject[] allLights = GameObject.FindGameObjectsWithTag ("Light");
 
 		foreach (GameObject i in allLights) {
-			i.SetActive (IsOn);
+			i.SetActive (lightOn);
 		} 
 		SpriteRenderer[] bitmaps = GameObject.FindObjectsOfType<SpriteRenderer>();
-		if (IsOn) {
+		if (lightOn) {
 			foreach (SpriteRenderer i in bitmaps) {
 				i.material = LightOnMaterial;
 			} 
