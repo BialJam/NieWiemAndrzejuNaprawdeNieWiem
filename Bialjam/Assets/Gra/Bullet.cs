@@ -25,6 +25,7 @@ public class Bullet : MonoBehaviour
 	{
 		Debug.Log ("We have a collision here!");
 		if (coll.gameObject) {
+			
 			if (coll.gameObject.layer == 10) { // Player's layer
 				gameObject.layer = 11;
 				GameObject Temporary_Bullet_Handler;
@@ -47,16 +48,21 @@ public class Bullet : MonoBehaviour
 
 				Temporary_Bullet_Handler.SendMessage ("SetShooter", Shooter);
 			} else if (coll.gameObject.layer == 9) { // enemy
-                if (coll.gameObject != Shooter)
-                {
+				if (coll.gameObject != Shooter) {
 					coll.gameObject.SendMessage ("OnDamage");
 					GlobalVariable.Instance.score += 100;
-                    Destroy(coll.gameObject); // enemy dies
-                    GlobalVariable.Instance.enemies--;
-                }
+					GlobalVariable.Instance.shake = true;
+					Destroy (coll.gameObject); // enemy dies
+					GlobalVariable.Instance.enemies--;
+				}
 				Destroy (gameObject);	  // bullet does as well
 			} else if (coll.gameObject.layer == 13) { // platform
 				Destroy (gameObject);
+			} else if (coll.gameObject.layer == 14 && gameObject.layer == 11) { // Ziomek
+				Debug.Log("trafienie ziomsona");
+				Destroy(coll.gameObject);
+				Time.timeScale = 0;
+				Buttons.LosedGame ();
 			}
 		}
 	}
