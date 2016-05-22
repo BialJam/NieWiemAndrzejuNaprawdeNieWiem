@@ -62,13 +62,10 @@ public class Bullet : MonoBehaviour
 				Temporary_Bullet_Handler.SendMessage ("SetShooter", Shooter);
 			} else if (coll.gameObject.layer == 9) { // enemy
 				if (coll.gameObject != Shooter) {
-					Debug.Log("play sound");
-					//gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
+					gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
 					coll.gameObject.SendMessage ("OnDamage");
-					GameObject.Find("Player 1").SendMessage("playSound");
 					GlobalVariable.Instance.score += 100;
 					GlobalVariable.Instance.shake = true;
-					Destroy (coll.gameObject); // enemy dies
 					GlobalVariable.Instance.enemies--;
 				}
 				gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
@@ -76,11 +73,8 @@ public class Bullet : MonoBehaviour
 			} else if (coll.gameObject.layer == 13) { // platform
 				Destroy (gameObject);
 			} else if (coll.gameObject.layer == 14 && gameObject.layer == 11) { // Ziomek
-				Debug.Log("trafienie ziomsona");
 				coll.gameObject.SendMessage ("OnDamage");
 				Destroy(gameObject);
-				//Time.timeScale = 0;
-				//Buttons.LosedGame ();
 			}
 		}
 	}

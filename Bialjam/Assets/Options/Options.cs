@@ -24,19 +24,10 @@ public class Options : MonoBehaviour
 
         GUI.skin = mySkin;
         int siz = GlobalVariable.Instance.buttonSize;
-        if (LightManager.Instance.IsOn)
-        {
-			if (GUI.Button(new Rect(Screen.width / 2 - 128, Screen.height / 2 - 106, 256, 64), "Nightmode ON")) {
-                LightManager.Instance.SetLights(false);
-			}
-        }
-        else
-        {
-			if (GUI.Button (new Rect (Screen.width / 2 - 128, Screen.height / 2 - 106, 256, 64), "Nightmode OFF")) {
-				LightManager.Instance.SetLights (true);
-			}
-        }
-		if (GUI.Button(new Rect(Screen.width / 2 - 128, Screen.height / 2 - 32, 256, 64), "Music: " + MusicManager.Instance.GetTrackTitle()))
+		if (GUI.Button (new Rect (Screen.width / 2 - 256, Screen.height / 2 - 138, 512, 128), "Nightmode " + (LightManager.Instance.IsOn ? "ON" : "OFF"))) {
+			LightManager.Instance.SetLights(!LightManager.Instance.IsOn);
+		}
+		if (GUI.Button(new Rect(Screen.width / 2 - 256, Screen.height / 2 + 10, 512, 128), "Music: " + MusicManager.Instance.GetTrackTitle()))
 		{
 			MusicManager.Instance.PlayNextTrack();
         }

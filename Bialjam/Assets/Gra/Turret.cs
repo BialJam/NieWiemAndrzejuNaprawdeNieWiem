@@ -7,6 +7,7 @@ public class Turret : MonoBehaviour {
 	public GameObject TurretBody;
 	public GameObject Player;
 	public SpriteRenderer Eye;
+	public GameObject EyeObject;
 	public GameObject Aura;
 	public Sprite LU, LC, LD, RU, RC, RD;
 	public double randomExhaust = 5f;
@@ -21,6 +22,7 @@ public class Turret : MonoBehaviour {
 		Player = GameObject.Find ("Player 1");
 		Aura.SetActive (false);
 		nextShoot = Random.Range (0f, 3f);
+		TurretBody.GetComponent<Animator> ().ResetTrigger ("onDeath");
 	}
 	
 	// Update is called once per frame
@@ -108,6 +110,21 @@ public class Turret : MonoBehaviour {
         {
             GlobalVariable.Instance.ChangePlayerHealth(50);
             Player.SendMessage("powerup");
-        }
+		}
+		Debug.Log ("On Death");
+		TurretBody.GetComponent<Animator> ().Play ("onDeath");
+		EyeObject.SetActive (false);
+		StartCoroutine(Die());
+	}
+
+	private IEnumerator Die()
+	{
+		TurretBody.GetComponent<Animator> ().SetTrigger ("onDeath");
+		yield return new WaitForSeconds(.2404285f);
+		Destroy(gameObject);
 	}
 }
+
+/*
+
+*/
