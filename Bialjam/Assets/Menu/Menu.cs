@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class Menu : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class Menu : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        GlobalVariable.Instance.highscore = int.Parse(File.ReadAllText(Application.dataPath + "/highscore.txt"));
+        GlobalVariable.Instance.bestname = File.ReadAllText(Application.dataPath + "/bestname.txt");
     }
 
     // Update is called once per frame

@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 	public SpriteRenderer BulletBody;
 	public GameObject Shooter;
 	public GameObject BulletLight;
+    public AudioClip DeadSound, rozszczepienieSound;
     void Start()
     {
     }
@@ -33,10 +34,11 @@ public class Bullet : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		Debug.Log ("We have a collision here!");
+		//Debug.Log ("We have a collision here!");
 		if (coll.gameObject) {
 			
 			if (coll.gameObject.layer == 10) { // Player's layer
+                gameObject.AddComponent<AudioSource>().PlayOneShot(rozszczepienieSound);
 				gameObject.layer = 11;
 				int degree_multiplier = 1;
 				if (!BulletBody.flipX)
@@ -63,20 +65,25 @@ public class Bullet : MonoBehaviour
 				Temporary_Bullet_Handler.SendMessage ("SetShooter", Shooter);
 			} else if (coll.gameObject.layer == 9) { // enemy
 				if (coll.gameObject != Shooter) {
-					coll.gameObject.SendMessage ("OnDamage");
+                    Debug.Log("play sound");
+                    //gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
+                    coll.gameObject.SendMessage ("OnDamage");
+                    GameObject.Find("Player 1").SendMessage("playSound");
 					GlobalVariable.Instance.score += 100;
 					GlobalVariable.Instance.shake = true;
 					Destroy (coll.gameObject); // enemy dies
 					GlobalVariable.Instance.enemies--;
 				}
-				Destroy (gameObject);	  // bullet does as well
+                gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
+                Destroy (gameObject);	  // bullet does as well
 			} else if (coll.gameObject.layer == 13) { // platform
 				Destroy (gameObject);
 			} else if (coll.gameObject.layer == 14 && gameObject.layer == 11) { // Ziomek
 				Debug.Log("trafienie ziomsona");
-				Destroy(coll.gameObject);
-				Time.timeScale = 0;
-				Buttons.LosedGame ();
+				coll.gameObject.SendMessage ("OnDamage");
+				Destroy(gameObject);
+				//Time.timeScale = 0;
+				//Buttons.LosedGame ();
 			}
 		}
 	}

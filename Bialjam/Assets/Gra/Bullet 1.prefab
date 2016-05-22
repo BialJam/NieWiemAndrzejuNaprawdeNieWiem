@@ -184,6 +184,8 @@ MonoBehaviour:
   BulletBody: {fileID: 21248168}
   Shooter: {fileID: 0}
   BulletLight: {fileID: 111352}
+  DeadSound: {fileID: 8300000, guid: a514478953c9e88478892247b84ff2d7, type: 3}
+  rozszczepienieSound: {fileID: 8300000, guid: 5107534337cede04fb36bc5297cb993b, type: 3}
 --- !u!212 &21248168
 SpriteRenderer:
   m_ObjectHideFlags: 1

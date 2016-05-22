@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 	public GameObject body;
+    public AudioClip DeadSound;
+    public AudioClip powerupSound;
 	// Use this for initialization
 	void Start () {
 	
@@ -12,4 +14,13 @@ public class Player : MonoBehaviour {
 	void Update () {
 	    
 	}
+
+    void playSound()
+    {
+        gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
+    }
+    void powerup()
+    {
+        gameObject.AddComponent<AudioSource>().PlayOneShot(powerupSound);
+    }
 }
