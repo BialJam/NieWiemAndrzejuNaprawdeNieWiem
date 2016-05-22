@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		Debug.Log ("We have a collision here!");
+		//Debug.Log ("We have a collision here!");
 		if (coll.gameObject) {
 			
 			if (coll.gameObject.layer == 10) { // Player's layer
@@ -60,9 +60,10 @@ public class Bullet : MonoBehaviour
 				Destroy (gameObject);
 			} else if (coll.gameObject.layer == 14 && gameObject.layer == 11) { // Ziomek
 				Debug.Log("trafienie ziomsona");
-				Destroy(coll.gameObject);
-				Time.timeScale = 0;
-				Buttons.LosedGame ();
+				coll.gameObject.SendMessage ("OnDamage");
+				Destroy(gameObject);
+				//Time.timeScale = 0;
+				//Buttons.LosedGame ();
 			}
 		}
 	}
