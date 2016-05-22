@@ -137,8 +137,6 @@ GameObject:
   - 92: {fileID: 1131465939}
   - 124: {fileID: 1131465938}
   - 81: {fileID: 1131465937}
-  - 114: {fileID: 1131465943}
-  - 114: {fileID: 1131465942}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -214,30 +212,6 @@ Transform:
   - {fileID: 1519528004}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &1131465942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1131465936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba19d629619b8b84aa8a1a9b7e8734e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySkin: {fileID: 0}
---- !u!114 &1131465943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1131465936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba19d629619b8b84aa8a1a9b7e8734e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySkin: {fileID: 0}
 --- !u!1 &1519528003
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +221,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1519528004}
   - 212: {fileID: 1519528005}
-  - 114: {fileID: 1519528006}
   m_Layer: 0
   m_Name: start_screen_512_288_ciemny
   m_TagString: Untagged
@@ -297,15 +270,3 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!114 &1519528006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1519528003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba19d629619b8b84aa8a1a9b7e8734e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mySkin: {fileID: 0}
