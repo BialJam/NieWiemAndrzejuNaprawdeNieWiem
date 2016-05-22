@@ -23,6 +23,7 @@ public class Buttons
 			GlobalVariable.Instance.SetPlayerHealth (100);
 			GlobalVariable.Instance.score = GlobalVariable.Instance.startLevelScore;
 		}
+		GlobalVariable.Instance.score = Mathf.Max (0, GlobalVariable.Instance.score - 500);
 		SceneManager.LoadScene("Level " + GlobalVariable.Instance.level);
 	}
     public static void ExitGame()
