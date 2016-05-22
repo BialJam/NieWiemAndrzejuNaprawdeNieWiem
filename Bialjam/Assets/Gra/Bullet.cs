@@ -51,14 +51,17 @@ public class Bullet : MonoBehaviour
 				Temporary_Bullet_Handler.SendMessage ("SetShooter", Shooter);
 			} else if (coll.gameObject.layer == 9) { // enemy
 				if (coll.gameObject != Shooter) {
-                    gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
+                    Debug.Log("play sound");
+                    //gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
                     coll.gameObject.SendMessage ("OnDamage");
+                    GameObject.Find("Player 1").SendMessage("playSound");
 					GlobalVariable.Instance.score += 100;
 					GlobalVariable.Instance.shake = true;
 					Destroy (coll.gameObject); // enemy dies
 					GlobalVariable.Instance.enemies--;
 				}
-				Destroy (gameObject);	  // bullet does as well
+                gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
+                Destroy (gameObject);	  // bullet does as well
 			} else if (coll.gameObject.layer == 13) { // platform
 				Destroy (gameObject);
 			} else if (coll.gameObject.layer == 14 && gameObject.layer == 11) { // Ziomek
