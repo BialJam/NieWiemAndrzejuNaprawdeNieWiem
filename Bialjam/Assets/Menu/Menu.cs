@@ -32,7 +32,11 @@ public class Menu : MonoBehaviour
         {
             SceneManager.LoadScene("Options");
         }
-        if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 26 * siz, 128 * siz, 32 * siz), "Exit"))
+        if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 26 * siz, 128 * siz, 32 * siz), "Credits"))
+        {
+            SceneManager.LoadScene("Credits");
+        }
+        if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 68 * siz, 128 * siz, 32 * siz), "Exit"))
         {
             Buttons.ExitGame();
         }
@@ -47,7 +51,6 @@ public class Menu : MonoBehaviour
         if (!GlobalVariable.Instance.hardcore)
             GUI.Label(new Rect(Screen.width / 2 - 128, Screen.height - 74, 256, 64), "Normal");
         else
-
             GUI.Label(new Rect(Screen.width / 2 - 128, Screen.height - 74, 256, 64), "Hardcore");
 
     }
