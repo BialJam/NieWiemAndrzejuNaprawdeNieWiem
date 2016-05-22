@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 138814}
+  DeadSound: {fileID: 8300000, guid: a514478953c9e88478892247b84ff2d7, type: 3}
+  powerupSound: {fileID: 8300000, guid: 87c714bb2da7df141a491e1528bf8444, type: 3}
 --- !u!114 &11422570
 MonoBehaviour:
   m_ObjectHideFlags: 1
