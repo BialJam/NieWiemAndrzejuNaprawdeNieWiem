@@ -11,6 +11,7 @@ public class Menu : MonoBehaviour
     {
         GlobalVariable.Instance.highscore = int.Parse(File.ReadAllText(Application.dataPath + "/highscore.txt"));
         GlobalVariable.Instance.bestname = File.ReadAllText(Application.dataPath + "/bestname.txt");
+		MusicManager.Instance.Init ();
     }
 
     // Update is called once per frame
