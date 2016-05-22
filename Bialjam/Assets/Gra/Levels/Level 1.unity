@@ -558,10 +558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1b5c249fd00214b9cb519bd5ab23f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canTransform: {fileID: 0}
-  shakeDuration: 0.09
-  shakeAmount: 0
-  decreaseFactor: 1
+  shake_decay: 0
+  shake_intensity: 0
 --- !u!1 &1636515842
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,6 +939,14 @@ Prefab:
     - target: {fileID: 449592, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035956, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422570, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
+      propertyPath: speed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
