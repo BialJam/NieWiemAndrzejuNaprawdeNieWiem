@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System;
+using System.IO;
 
 
 public class Buttons
@@ -35,8 +37,11 @@ public class Buttons
     }
     public static void SaveScore(string s)
     {
-        if (GlobalVariable.Instance.highscore < GlobalVariable.Instance.score)
+        int high = int.Parse(File.ReadAllText(Application.dataPath + "/highscore.txt"));
+        if (high < GlobalVariable.Instance.score)
         {
+            File.WriteAllText(Application.dataPath + "/highscore.txt", GlobalVariable.Instance.score.ToString());
+            File.WriteAllText(Application.dataPath + "/bestname.txt", s);
             GlobalVariable.Instance.highscore = GlobalVariable.Instance.score;
             GlobalVariable.Instance.bestname = s;
             Debug.Log("Lepszy wynik nadpisany");
