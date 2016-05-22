@@ -299,6 +299,8 @@ MonoBehaviour:
   RD: {fileID: 21300004, guid: cda29fb6b028a464a9ab5285ead6cdcc, type: 3}
   randomExhaust: 5
   aura: 0
+  ShootSound: {fileID: 8300000, guid: 2cce2be948166914182fa7381d2a9a3f, type: 3}
+  DeadSound: {fileID: 8300000, guid: a514478953c9e88478892247b84ff2d7, type: 3}
 --- !u!212 &21200064
 SpriteRenderer:
   m_ObjectHideFlags: 1
