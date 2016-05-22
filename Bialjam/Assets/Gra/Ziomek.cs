@@ -15,7 +15,7 @@ public class Ziomek : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if ((double)Time.time > nextRandom ) {
-			if (Random.Range (0, 100) >= 90) {
+			if (Random.Range (0, 100) >= 80) {
 				aura = true;
 				usunAure = Time.time + auraExhaust;
 				Aura.SetActive(true);

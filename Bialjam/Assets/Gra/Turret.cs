@@ -20,6 +20,7 @@ public class Turret : MonoBehaviour {
 	void Start () {
 		Player = GameObject.Find ("Player 1");
 		Aura.SetActive (false);
+		nextShoot = Random.Range (0f, 3f);
 	}
 	
 	// Update is called once per frame
