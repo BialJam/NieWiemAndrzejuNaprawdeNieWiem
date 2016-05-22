@@ -16,6 +16,7 @@ public class GlobalVariable
     public int enemies;
 	public float BulletForwardForce = .04f;
     public bool hardcore = false;
+    public bool shake = false;
 
     private static GlobalVariable instance;
     public static GlobalVariable Instance
