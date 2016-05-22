@@ -200,7 +200,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 499514, guid: b41b996cf2a43a24ebbe6bcb301aa558, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.86
+      value: -1.124
       objectReference: {fileID: 0}
     - target: {fileID: 499514, guid: b41b996cf2a43a24ebbe6bcb301aa558, type: 2}
       propertyPath: m_LocalPosition.z
@@ -230,6 +230,10 @@ Prefab:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1304870246}
+    - target: {fileID: 21225762, guid: b41b996cf2a43a24ebbe6bcb301aa558, type: 2}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b41b996cf2a43a24ebbe6bcb301aa558, type: 2}
   m_IsPrefabParent: 0
@@ -646,6 +650,7 @@ MonoBehaviour:
   mySkin: {fileID: 11400000, guid: 11191657d3533d54faf50d50f4b62af6, type: 2}
   enemies: 3
   level: 5
+  last: 0
 --- !u!4 &1218407824
 Transform:
   m_ObjectHideFlags: 0
@@ -671,7 +676,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 484512, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.53
+      value: -4.06
       objectReference: {fileID: 0}
     - target: {fileID: 484512, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
       propertyPath: m_LocalPosition.z

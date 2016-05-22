@@ -250,6 +250,10 @@ Prefab:
       propertyPath: m_Name
       value: Turret 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 21225762, guid: b41b996cf2a43a24ebbe6bcb301aa558, type: 2}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b41b996cf2a43a24ebbe6bcb301aa558, type: 2}
   m_IsPrefabParent: 0
@@ -564,6 +568,10 @@ Prefab:
     - target: {fileID: 147978, guid: b41b996cf2a43a24ebbe6bcb301aa558, type: 2}
       propertyPath: m_Name
       value: Turret 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 21225762, guid: b41b996cf2a43a24ebbe6bcb301aa558, type: 2}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b41b996cf2a43a24ebbe6bcb301aa558, type: 2}
@@ -931,7 +939,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 499514, guid: b41b996cf2a43a24ebbe6bcb301aa558, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.86
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 499514, guid: b41b996cf2a43a24ebbe6bcb301aa558, type: 2}
       propertyPath: m_LocalPosition.z
@@ -961,6 +969,10 @@ Prefab:
       propertyPath: Player
       value: 
       objectReference: {fileID: 342903001}
+    - target: {fileID: 21225762, guid: b41b996cf2a43a24ebbe6bcb301aa558, type: 2}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b41b996cf2a43a24ebbe6bcb301aa558, type: 2}
   m_IsPrefabParent: 0
@@ -1281,7 +1293,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 484512, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.46
+      value: -4.186
       objectReference: {fileID: 0}
     - target: {fileID: 484512, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1334,6 +1346,10 @@ Prefab:
     - target: {fileID: 11422570, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
       propertyPath: speed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 21237280, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}

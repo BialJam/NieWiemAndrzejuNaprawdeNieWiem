@@ -390,7 +390,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 484512, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.95
+      value: 3.59
       objectReference: {fileID: 0}
     - target: {fileID: 484512, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -414,7 +414,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 484512, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11422570, guid: 96be72eeec9c56b4299e75cb245a608f, type: 2}
       propertyPath: JumpForce
