@@ -102,8 +102,11 @@ public class Turret : MonoBehaviour {
 		}
 	}
 	void OnDamage() {
-        if (aura) {
-			GlobalVariable.Instance.ChangePlayerHealth(50);
-		}
+        Player.SendMessage("playSound");
+        if (aura)
+        {
+            GlobalVariable.Instance.ChangePlayerHealth(50);
+            Player.SendMessage("powerup");
+        }
 	}
 }
