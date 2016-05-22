@@ -10,10 +10,10 @@ public class LightManager {
 		GameObject[] allLights = GameObject.FindGameObjectsWithTag ("Light");
 
 		foreach (GameObject i in allLights) {
-			i.SetActive (isOn);
+			i.SetActive (IsOn);
 		} 
 		SpriteRenderer[] bitmaps = GameObject.FindObjectsOfType<SpriteRenderer>();
-		if (isOn) {
+		if (IsOn) {
 			foreach (SpriteRenderer i in bitmaps) {
 				i.material = LightOnMaterial;
 			} 
@@ -25,8 +25,8 @@ public class LightManager {
 	}
 
 	public void SetLights(bool enabled) {
-		if (isOn != enabled) {
-			isOn = enabled;
+		if (IsOn != enabled) {
+			IsOn = enabled;
 			UpdateLights ();
 		}
 	}
