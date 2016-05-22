@@ -16,6 +16,6 @@ public class Title : MonoBehaviour {
     void OnGUI()
     {
         GUI.skin = mySkin;
-        GUI.TextField(new Rect(Screen.width / 2 - 400, 50, 800, 200), "Sfera Sprawiedliwosci");
+        GUI.TextField(new Rect(Screen.width / 2 - 400, 25, 800, 200), "Sfera Sprawiedliwosci");
     }
 }
