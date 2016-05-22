@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour
 {
 	public GameObject BulletBody;
 	public GameObject Shooter;
-    public AudioClip DeadSound;
+    public AudioClip DeadSound, rozszczepienieSound;
     void Start()
     {
     }
@@ -28,6 +28,7 @@ public class Bullet : MonoBehaviour
 		if (coll.gameObject) {
 			
 			if (coll.gameObject.layer == 10) { // Player's layer
+                gameObject.AddComponent<AudioSource>().PlayOneShot(rozszczepienieSound);
 				gameObject.layer = 11;
 				GameObject Temporary_Bullet_Handler;
 				Temporary_Bullet_Handler = Instantiate (gameObject, GetComponent<Collider2D> ().transform.position, transform.rotation) as GameObject;
@@ -50,10 +51,10 @@ public class Bullet : MonoBehaviour
 				Temporary_Bullet_Handler.SendMessage ("SetShooter", Shooter);
 			} else if (coll.gameObject.layer == 9) { // enemy
 				if (coll.gameObject != Shooter) {
-					coll.gameObject.SendMessage ("OnDamage");
+                    gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
+                    coll.gameObject.SendMessage ("OnDamage");
 					GlobalVariable.Instance.score += 100;
 					GlobalVariable.Instance.shake = true;
-                    gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
 					Destroy (coll.gameObject); // enemy dies
 					GlobalVariable.Instance.enemies--;
 				}
