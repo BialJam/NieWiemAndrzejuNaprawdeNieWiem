@@ -4,7 +4,7 @@ using System.Collections;
 public class LightManager {
 	Material LightOnMaterial;
 	Material LightOffMaterial;
-	public bool IsOn;
+	public bool IsOn = true;
 	// Use this for initialization
 	public void UpdateLights() {
 		GameObject[] allLights = GameObject.FindGameObjectsWithTag ("Light");
@@ -25,10 +25,8 @@ public class LightManager {
 	}
 
 	public void SetLights(bool enabled) {
-		if (IsOn != enabled) {
-			IsOn = enabled;
-			UpdateLights ();
-		}
+		IsOn = enabled;
+		UpdateLights ();
 	}
 
 	private static LightManager instance;

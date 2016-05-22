@@ -25,7 +25,7 @@ public class Level : MonoBehaviour
         }
         GlobalVariable.Instance.level = level;
         GlobalVariable.Instance.enemies = enemies;
-		LightManager.Instance.SetLights (true);
+		LightManager.Instance.UpdateLights ();
     }
 
     // Update is called once per frame
