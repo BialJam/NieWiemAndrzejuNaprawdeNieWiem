@@ -92,10 +92,10 @@ public class Turret : MonoBehaviour {
 			lewo = true;
 		}
 		if (lewo) {
-			TurretBody.transform.eulerAngles = new Vector3 (0, 180, 0);
+			TurretBody.GetComponent<SpriteRenderer> ().flipX = true;
 			Aura.transform.localPosition = new Vector3 (.05f, 0, 0);
 		} else {
-			TurretBody.transform.eulerAngles = new Vector3 (0, 0, 0);
+			TurretBody.GetComponent<SpriteRenderer> ().flipX = false;
 			Aura.transform.localPosition = new Vector3 (-.05f, 0, 0);
 		}
 	}
