@@ -5,6 +5,7 @@ public class Bullet : MonoBehaviour
 {
 	public GameObject BulletBody;
 	public GameObject Shooter;
+    public AudioClip DeadSound;
     void Start()
     {
     }
@@ -52,6 +53,7 @@ public class Bullet : MonoBehaviour
 					coll.gameObject.SendMessage ("OnDamage");
 					GlobalVariable.Instance.score += 100;
 					GlobalVariable.Instance.shake = true;
+                    gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
 					Destroy (coll.gameObject); // enemy dies
 					GlobalVariable.Instance.enemies--;
 				}

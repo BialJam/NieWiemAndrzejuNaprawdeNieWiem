@@ -16,6 +16,7 @@ public class Turret : MonoBehaviour {
 	private float nextRandom = 0.0f; //internal
 	private double usunAure = 999999999;
 	private bool lewo;
+    public AudioClip ShootSound;
 	void Start () {
 		Player = GameObject.Find ("Player 1");
 		Aura.SetActive (false);
@@ -45,7 +46,8 @@ public class Turret : MonoBehaviour {
 	}
 
 	void Shoot() {
-		GameObject Temporary_Bullet_Handler;
+        gameObject.AddComponent<AudioSource>().PlayOneShot(ShootSound);
+        GameObject Temporary_Bullet_Handler;
 		Vector2 Direction = Player.transform.position - BulletSpawningPoint.transform.position;
 		Direction.Normalize ();
 		Temporary_Bullet_Handler = Instantiate(Bullet,GetComponent<Collider2D>().transform.position,transform.rotation) as GameObject;
