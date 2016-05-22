@@ -10,11 +10,11 @@ public class Level : MonoBehaviour
     public GUISkin mySkin;
     public static bool paused;
     public int enemies;
-    public int level;
+    public int level, last;
     // Use this for initialization
     void Start()
     {
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         paused = false;
         pauseBackground.SetActive(false);
         GlobalVariable.Instance.startLevelScore = GlobalVariable.Instance.score;
@@ -25,7 +25,7 @@ public class Level : MonoBehaviour
         }
         GlobalVariable.Instance.level = level;
         GlobalVariable.Instance.enemies = enemies;
-		LightManager.Instance.UpdateLights ();
+        LightManager.Instance.UpdateLights();
     }
 
     // Update is called once per frame
@@ -38,21 +38,20 @@ public class Level : MonoBehaviour
                 GlobalVariable.Instance.score += 5;
             }
         }
-        if (Input.GetKey("escape"))
+        if (Input.GetKey("escape") && DateTime.Now.Millisecond + DateTime.Now.Second * 1000 - last > 400)
         {
+            last = DateTime.Now.Millisecond + DateTime.Now.Second * 1000;
             if (!paused)
             {
                 pauseBackground.SetActive(true);
                 paused = true;
                 Time.timeScale = 0;
-                Thread.Sleep(100);
             }
             else
             {
                 pauseBackground.SetActive(false);
                 paused = false;
                 Time.timeScale = 1;
-                Thread.Sleep(200);
             }
         }
         if (GlobalVariable.Instance.GetPlayerHealth() <= 0)
@@ -68,8 +67,8 @@ public class Level : MonoBehaviour
             level++;
             Debug.Log("laduje " + level);
             if (level == 7) SceneManager.LoadScene("Win");
-			else SceneManager.LoadScene("Level " + level);
-			LightManager.Instance.UpdateLights ();
+            else SceneManager.LoadScene("Level " + level);
+            LightManager.Instance.UpdateLights();
         }
     }
 
