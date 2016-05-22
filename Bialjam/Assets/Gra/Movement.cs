@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour {
 	private float JumpTime;
 	private float JumpDelay=.5f;
 	private int jumped;
+	public SpriteRenderer PlayerBody;
 	private float dif=0.1f;
 	public RaycastHit2D[] linecastResult = new RaycastHit2D[1];
 	Animator anim;
@@ -30,11 +31,13 @@ public class Movement : MonoBehaviour {
 		anim.SetFloat ("speed", Mathf.Abs (Input.GetAxis("Horizontal")));
 		if (Input.GetAxis ("Horizontal") < 0) {
 			transform.Translate (Vector3.right * -1 * speed * Time.deltaTime);
-			transform.eulerAngles = new Vector3 (360, 0, 360);
+			PlayerBody.flipX = false;
+			//transform.eulerAngles = new Vector3 (360, 0, 360);
 		}
 		if (Input.GetAxis ("Horizontal") > 0) {
-			transform.Translate (Vector3.right * -1 * speed * Time.deltaTime);
-			transform.eulerAngles = new Vector3 (360, 180, 360);
+			transform.Translate (Vector3.right * speed * Time.deltaTime);
+			PlayerBody.flipX = true;
+			//transform.eulerAngles = new Vector3 (360, 180, 360);
 		}
 		if (Input.GetKeyDown (KeyCode.Space) && (OnGround || jumped == 1)) {
 			anim.SetTrigger ("Jump");

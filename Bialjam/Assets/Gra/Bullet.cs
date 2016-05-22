@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour
 {
-	public GameObject BulletBody;
+	public SpriteRenderer BulletBody;
 	public GameObject Shooter;
+	public GameObject BulletLight;
     void Start()
     {
     }
@@ -12,10 +13,19 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		/*if (transform.rotation.y == 180) {
+			transform.
+		}*/
+		if (BulletLight.transform.position.z > 0) {
+			Vector3 sc = BulletLight.transform.localPosition;
+			sc.z *= -1;
+			BulletLight.transform.localPosition = sc;
+		}
     }
 
 	void SetShooter(GameObject s) {
 		Shooter = s;
+		CheckTransform ();
 	}
 	void SetShooterForBullet(GameObject s) {
 		s.SendMessage ("SetShooter", Shooter);
@@ -28,6 +38,10 @@ public class Bullet : MonoBehaviour
 			
 			if (coll.gameObject.layer == 10) { // Player's layer
 				gameObject.layer = 11;
+				int degree_multiplier = 1;
+				if (!BulletBody.flipX)
+					degree_multiplier = 3;
+				BulletBody.flipX = true;
 				GameObject Temporary_Bullet_Handler;
 				Temporary_Bullet_Handler = Instantiate (gameObject, GetComponent<Collider2D> ().transform.position, transform.rotation) as GameObject;
 				//Sometimes bullets may appear rotated incorrectly due to the way its pivot was set from the original modeling package.
@@ -37,13 +51,13 @@ public class Bullet : MonoBehaviour
 				Rigidbody2D Temporary_RigidBody;
 				Temporary_RigidBody = Temporary_Bullet_Handler.GetComponent<Rigidbody2D> ();
 				Destroy (Temporary_Bullet_Handler, 10.0f); // destruct after 10 seconds
-				Temporary_RigidBody.AddForce (Quaternion.Euler (0, 0, -45) * -gameObject.transform.right * GlobalVariable.Instance.BulletForwardForce);
+				Temporary_RigidBody.AddForce (Quaternion.Euler (0, 0, -45 * degree_multiplier) * -gameObject.transform.right * GlobalVariable.Instance.BulletForwardForce);
 				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
-				GetComponent<Rigidbody2D> ().AddForce (Quaternion.Euler (0, 0, 45) * -gameObject.transform.right * GlobalVariable.Instance.BulletForwardForce);
+				GetComponent<Rigidbody2D> ().AddForce (Quaternion.Euler (0, 0, 45 * degree_multiplier) * -gameObject.transform.right * GlobalVariable.Instance.BulletForwardForce);
 				Destroy (gameObject, 10.0f);
 				Vector3 rot = new Vector3 (0, 0, 1);
-				transform.RotateAround (rot, Mathf.Deg2Rad * 45);
-				Temporary_Bullet_Handler.transform.RotateAround (rot, Mathf.Deg2Rad * -45);
+				transform.RotateAround (rot, Mathf.Deg2Rad * 45 * degree_multiplier);
+				Temporary_Bullet_Handler.transform.RotateAround (rot, Mathf.Deg2Rad * -45 * degree_multiplier);
 				GlobalVariable.Instance.playerHealth -= 5;
 
 				Temporary_Bullet_Handler.SendMessage ("SetShooter", Shooter);
@@ -64,6 +78,13 @@ public class Bullet : MonoBehaviour
 				Time.timeScale = 0;
 				Buttons.LosedGame ();
 			}
+		}
+	}
+	void CheckTransform() {
+		if (transform.rotation.y > 0.5) { // can be only (around) 0 or 1
+			Debug.Log ("Shall rotate!");
+			transform.Rotate (Vector3.up * 180);
+			BulletBody.flipX ^= true;
 		}
 	}
 }
