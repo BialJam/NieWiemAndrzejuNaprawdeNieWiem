@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 133969820}
+  - 114: {fileID: 133969819}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -100,6 +101,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &133969819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 133969818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecbf8b025d73a264caabba89639a7c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseBackground: {fileID: 0}
+  mySkin: {fileID: 0}
+  enemies: 5
+  level: 0
 --- !u!4 &133969820
 Transform:
   m_ObjectHideFlags: 0

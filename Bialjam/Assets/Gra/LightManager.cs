@@ -4,9 +4,9 @@ using System.Collections;
 public class LightManager {
 	Material LightOnMaterial;
 	Material LightOffMaterial;
-	bool isOn;
+	public bool IsOn;
 	// Use this for initialization
-	void UpdateLights() {
+	public void UpdateLights() {
 		GameObject[] allLights = GameObject.FindGameObjectsWithTag ("Light");
 
 		foreach (GameObject i in allLights) {

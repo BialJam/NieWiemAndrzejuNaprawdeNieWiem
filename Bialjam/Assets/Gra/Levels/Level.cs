@@ -68,7 +68,8 @@ public class Level : MonoBehaviour
             level++;
             Debug.Log("laduje " + level);
             if (level == 7) SceneManager.LoadScene("Win");
-            else SceneManager.LoadScene("Level " + level);
+			else SceneManager.LoadScene("Level " + level);
+			LightManager.Instance.UpdateLights ();
         }
     }
 
