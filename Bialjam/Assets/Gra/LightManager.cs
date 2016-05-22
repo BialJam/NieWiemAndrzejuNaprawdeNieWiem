@@ -19,7 +19,7 @@ public class LightManager {
 		SpriteRenderer[] bitmaps = GameObject.FindObjectsOfType<SpriteRenderer>();
 		if (lightOn) {
 			foreach (SpriteRenderer i in bitmaps) {
-				i.material = LightOnMaterial;
+				i.material = (i.tag == "Player") ? LightOffMaterial : LightOnMaterial;
 			} 
 		} else {
 			foreach (SpriteRenderer i in bitmaps) {
