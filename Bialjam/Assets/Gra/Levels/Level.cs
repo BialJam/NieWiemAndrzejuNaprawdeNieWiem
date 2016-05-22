@@ -16,12 +16,13 @@ public class Level : MonoBehaviour
     {
         Time.timeScale = 1;
         paused = false;
-		pauseBackground.SetActive(false);
-		GlobalVariable.Instance.startLevelScore = GlobalVariable.Instance.score;
+        pauseBackground.SetActive(false);
+        GlobalVariable.Instance.startLevelScore = GlobalVariable.Instance.score;
         GlobalVariable.Instance.score = Mathf.Max(0, GlobalVariable.Instance.score - 150);
-		if (GlobalVariable.Instance.hardcore) {
-			GlobalVariable.Instance.playerHealth = 100;
-		}
+        if (GlobalVariable.Instance.hardcore)
+        {
+            GlobalVariable.Instance.playerHealth = 100;
+        }
         GlobalVariable.Instance.level = level;
         GlobalVariable.Instance.enemies = enemies;
     }
@@ -50,7 +51,7 @@ public class Level : MonoBehaviour
                 pauseBackground.SetActive(false);
                 paused = false;
                 Time.timeScale = 1;
-                Thread.Sleep(100);
+                Thread.Sleep(200);
             }
         }
         if (GlobalVariable.Instance.GetPlayerHealth() <= 0)
@@ -65,7 +66,8 @@ public class Level : MonoBehaviour
             GlobalVariable.Instance.SetPlayerHealth(100);
             level++;
             Debug.Log("laduje " + level);
-            SceneManager.LoadScene("Level " + level);
+            if (level == 7) SceneManager.LoadScene("Win");
+            else SceneManager.LoadScene("Level " + level);
         }
     }
 
@@ -74,41 +76,49 @@ public class Level : MonoBehaviour
         GUI.skin = mySkin;
         int siz = GlobalVariable.Instance.buttonSize;
         if (paused)
-		{
-			if (GlobalVariable.Instance.hardcore) {
-				if (GUI.Button (new Rect (Screen.width / 2 - 64 * siz, Screen.height / 2 - 37 * siz, 128 * siz, 32 * siz), "Return")) {
-					pauseBackground.SetActive (false);
-					paused = false;
-					Time.timeScale = 1;
-				}
-				if (GUI.Button (new Rect (Screen.width / 2 - 64 * siz, Screen.height / 2 + 5 * siz, 128 * siz, 32 * siz), "Exit")) {
-					pauseBackground.SetActive (false);
-					Debug.Log ("Game aborted");
-					paused = false;
-					Time.timeScale = 1;
-					SceneManager.LoadScene ("Menu");
-				}
-			} else {
-				if (GUI.Button (new Rect (Screen.width / 2 - 64 * siz, Screen.height / 2 - 58 * siz, 128 * siz, 32 * siz), "Return")) {
-					pauseBackground.SetActive (false);
-					paused = false;
-					Time.timeScale = 1;
-				}
-				if (GUI.Button (new Rect (Screen.width / 2 - 64 * siz, Screen.height / 2 - 16 * siz, 128 * siz, 32 * siz), "Retry Level")) {
-					pauseBackground.SetActive (false);
-					paused = false;
-					Time.timeScale = 1;
-					Buttons.RetryLevel ();
-	                    
-				}
-				if (GUI.Button (new Rect (Screen.width / 2 - 64 * siz, Screen.height / 2 + 26 * siz, 128 * siz, 32 * siz), "Exit")) {
-					pauseBackground.SetActive (false);
-					Debug.Log ("Game aborted");
-					paused = false;
-					Time.timeScale = 1;
-					SceneManager.LoadScene ("Menu");
-				}
-			}
+        {
+            if (GlobalVariable.Instance.hardcore)
+            {
+                if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 37 * siz, 128 * siz, 32 * siz), "Return"))
+                {
+                    pauseBackground.SetActive(false);
+                    paused = false;
+                    Time.timeScale = 1;
+                }
+                if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 5 * siz, 128 * siz, 32 * siz), "Exit"))
+                {
+                    pauseBackground.SetActive(false);
+                    Debug.Log("Game aborted");
+                    paused = false;
+                    Time.timeScale = 1;
+                    SceneManager.LoadScene("Menu");
+                }
+            }
+            else
+            {
+                if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 58 * siz, 128 * siz, 32 * siz), "Return"))
+                {
+                    pauseBackground.SetActive(false);
+                    paused = false;
+                    Time.timeScale = 1;
+                }
+                if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 - 16 * siz, 128 * siz, 32 * siz), "Retry Level"))
+                {
+                    pauseBackground.SetActive(false);
+                    paused = false;
+                    Time.timeScale = 1;
+                    Buttons.RetryLevel();
+
+                }
+                if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 26 * siz, 128 * siz, 32 * siz), "Exit"))
+                {
+                    pauseBackground.SetActive(false);
+                    Debug.Log("Game aborted");
+                    paused = false;
+                    Time.timeScale = 1;
+                    SceneManager.LoadScene("Menu");
+                }
+            }
         }
     }
 }

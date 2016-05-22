@@ -32,19 +32,38 @@ public class lose : MonoBehaviour
         {
             Buttons.SaveScore(inputfield.text);
         }
-		if (GlobalVariable.Instance.hardcore) {
-			if (GUI.Button (new Rect (Screen.width / 2 - 64 * siz, Screen.height / 2 + 24 * siz, 128 * siz, 32 * siz), "Start new game")) {
-				Buttons.StartGame ();
-			}
-		} else {
-			if (GUI.Button (new Rect (Screen.width / 2 - 64 * siz, Screen.height / 2 + 24 * siz, 128 * siz, 32 * siz), "Retry Level")) {
-				Buttons.RetryLevel ();
-			}
-		}
         
+
         if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 60 * siz, 128 * siz, 32 * siz), "Menu"))
         {
             SceneManager.LoadScene("Menu");
+        }
+        if (gameObject.scene.name == "Lose")
+        {
+            GUI.Label(new Rect(Screen.width / 2 - 128, Screen.height / 2 - 340, 256, 64), "You lost!");
+            //if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 24 * siz, 128 * siz, 32 * siz), "Retry level"))
+            if (GlobalVariable.Instance.hardcore)
+            {
+                if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 24 * siz, 128 * siz, 32 * siz), "Start new game"))
+                {
+                    Buttons.StartGame();
+                }
+            }
+            else
+            {
+                if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 24 * siz, 128 * siz, 32 * siz), "Retry level"))
+                {
+                    Buttons.RetryLevel();
+                }
+            }
+        }
+        else
+        {
+            GUI.Label(new Rect(Screen.width / 2 - 128, Screen.height / 2 - 340, 256, 64), "You won!");
+            if (GUI.Button(new Rect(Screen.width / 2 - 64 * siz, Screen.height / 2 + 24 * siz, 128 * siz, 32 * siz), "Start new game"))
+            {
+                Buttons.StartGame();
+            }
         }
     }
 }
