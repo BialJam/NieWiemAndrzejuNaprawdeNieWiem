@@ -6,9 +6,8 @@ public class Movement : MonoBehaviour {
 	private bool OnGround;
 	public float speed=1f;
 	public float JumpForce;
-	private float JumpTime;
 	private float JumpDelay=.5f;
-	private int jumped;
+	private bool jumped;
 	public SpriteRenderer PlayerBody;
 	private float dif=0.1f;
 	public RaycastHit2D[] linecastResult = new RaycastHit2D[1];
@@ -26,6 +25,7 @@ public class Movement : MonoBehaviour {
 	void RaycastStuff(){
 		Physics2D.RaycastNonAlloc ((Vector2)transform.position - new Vector2(0, gameObject.GetComponent<Collider2D>().bounds.size.y/2 + 0.02f), Vector2.down, linecastResult);
 		OnGround = linecastResult [0].collider && linecastResult [0].distance < 0.05;
+		if (OnGround) jumped = false;
 	}
 	void MovementFunct(){
 		anim.SetFloat ("speed", Mathf.Abs (Input.GetAxis("Horizontal")));
@@ -39,22 +39,13 @@ public class Movement : MonoBehaviour {
 			PlayerBody.flipX = true;
 			//transform.eulerAngles = new Vector3 (360, 180, 360);
 		}
-		if (Input.GetKeyDown (KeyCode.Space) && (OnGround || jumped == 1)) {
+		if (Input.GetKeyDown (KeyCode.Space) && (OnGround || !jumped)) {
 			anim.SetTrigger ("Jump");
-			GetComponent<Rigidbody2D> ().AddForce (new Vector2(0,JumpForce));
-			jumped ++;
-			JumpForce = 0.1f;
-			JumpTime = Mathf.Max(JumpDelay, JumpTime + JumpDelay);
-		}
-		JumpTime -= Time.deltaTime;
-		JumpForce=Mathf.Min(250, JumpForce + dif);
-		if (JumpForce > 250)
-			JumpForce = 10;
-		dif +=1;
-		if ( JumpTime <= 0 && OnGround ) {
-			JumpForce = 250;
-			jumped = 0;
-			dif = 0.1f;
+			Vector3 nspd = GetComponent<Rigidbody2D> ().velocity;
+			nspd.y = 12;
+			GetComponent<Rigidbody2D> ().velocity = nspd;
+			if (!OnGround)
+				jumped = true;
 		}
 	}
 }

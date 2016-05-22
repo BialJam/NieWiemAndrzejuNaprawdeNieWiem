@@ -17,6 +17,7 @@ public class Turret : MonoBehaviour {
 	private float nextRandom = 0.0f; //internal
 	private double usunAure = 999999999;
 	private bool lewo;
+	bool isKilled;
     public AudioClip ShootSound, DeadSound;
 	void Start () {
 		Player = GameObject.Find ("Player 1");
@@ -104,7 +105,16 @@ public class Turret : MonoBehaviour {
 			Aura.transform.localPosition = new Vector3 (-.05f, 0, 0);
 		}
 	}
-	void OnDamage() {
+	void OnDamage(GameObject bullet) {
+		if (isKilled)
+			return;
+
+		GlobalVariable.Instance.score += 100;
+		bullet.AddComponent<AudioSource>().PlayOneShot(DeadSound);
+		GlobalVariable.Instance.shake = true;
+		GlobalVariable.Instance.enemies--;
+		Destroy (bullet);
+
         Player.SendMessage("playSound");
         if (aura)
         {
@@ -112,6 +122,7 @@ public class Turret : MonoBehaviour {
             Player.SendMessage("powerup");
 		}
 		Debug.Log ("On Death");
+		isKilled = true;
 		TurretBody.GetComponent<Animator> ().Play ("onDeath");
 		EyeObject.SetActive (false);
 		StartCoroutine(Die());

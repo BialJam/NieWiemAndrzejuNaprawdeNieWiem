@@ -5,7 +5,7 @@ public class GlobalVariable
 {
     // system variables
     public int buttonSize = 2;
-
+	public bool tipsShown = false;
     // game variables
 	public int score;
 	public int startLevelScore = 0;

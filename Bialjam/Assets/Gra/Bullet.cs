@@ -62,13 +62,8 @@ public class Bullet : MonoBehaviour
 				Temporary_Bullet_Handler.SendMessage ("SetShooter", Shooter);
 			} else if (coll.gameObject.layer == 9) { // enemy
 				if (coll.gameObject != Shooter) {
-					gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
-					coll.gameObject.SendMessage ("OnDamage");
-					GlobalVariable.Instance.score += 100;
-					GlobalVariable.Instance.shake = true;
-					GlobalVariable.Instance.enemies--;
+					coll.gameObject.SendMessage ("OnDamage", gameObject);
 				}
-				gameObject.AddComponent<AudioSource>().PlayOneShot(DeadSound);
 				Destroy (gameObject);	  // bullet does as well
 			} else if (coll.gameObject.layer == 13) { // platform
 				Destroy (gameObject);
