@@ -24,9 +24,11 @@ public class MusicManager {
 			AS.clip = ST1;
 			track = 1;
 			AS.loop = true;
-			AS.Play ();
+			AS.volume = 0.8f;
 			GameObject.DontDestroyOnLoad (AS);
 		}
+		if (!AS.isPlaying)
+			AS.Play ();
 	}
 	public void StartST(int i) {
 		if (i == 1)
