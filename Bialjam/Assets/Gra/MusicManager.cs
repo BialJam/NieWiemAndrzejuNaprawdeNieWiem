@@ -16,7 +16,7 @@ public class MusicManager {
 			ST2 = Resources.Load("Music/Modigs - Sweet & Sour", typeof(AudioClip)) as AudioClip;
 
 		if (!ST3)
-			ST3 = Resources.Load("Music/kaloryfer", typeof(AudioClip)) as AudioClip;
+			ST3 = Resources.Load("Music/kaloryfer2", typeof(AudioClip)) as AudioClip;
 		
 		if (!AS) {
 			GameObject o = new GameObject();
@@ -51,7 +51,7 @@ public class MusicManager {
 	}
 	public void PlayNextTrack() {
 		int i = track + 1;
-		if (i > 2)
+		if (i > 3)
 			i = 1;
 		StartST (i);
 	}
