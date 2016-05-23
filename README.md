@@ -3,17 +3,17 @@
 
 Wylosowany temat gry: **Dziel i rządź**.
 
-W grze wcielamy się w **Króla w Sferze Sprawiedliwości**. Naszym celem jest zabicie przeciwników za pomocą ich własnych pocisków, które po trafieniu w nas rozdzielają się oraz zabierają nam część punktów życia. Aby przejść poziom musimy unieszkodliwić odpowiednią ilość przeciwników, a także uważać, aby nie zabić ewentualnego poddanego.
+W grze wcielamy się w **Króla w Sferze Sprawiedliwości**. Naszym celem jest zabicie przeciwników za pomocą ich własnych pocisków, które po trafieniu w nas rozdzielają się oraz zabierają nam część punktów życia. Aby przejść poziom musimy unieszkodliwić odpowiednią liczbę przeciwników w taki sposób, by nie zabić ewentualnego poddanego.
 
-Implementacja:
+**Implementacja:**
 - Paweł Charyło
 - Bartosz Pieszko
 - Norbert Poniatowski
 
-Grafika:
+**Grafika:**
 - Tomasz Sierko
 
-Muzyka:
+**Muzyka:**
 - Modigs - Sweet & Sour
 - Modigs - Rad Racer
 - Kaloryfer
