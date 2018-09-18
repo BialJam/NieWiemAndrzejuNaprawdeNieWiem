@@ -18,6 +18,6 @@ W grze wcielamy się w **Króla w Sferze Sprawiedliwości**. Naszym celem jest z
 - Modigs - Rad Racer
 - Kaloryfer
 
-Cały kod gry oraz grafikę stworzyliśmy sami, jedynie muzyki Modgisa użyliśmy udostępnionej na licencji Creative Commons.
+Cały kod gry oraz grafikę stworzyliśmy sami, jedynie muzyki Modigsa użyliśmy udostępnionej na licencji Creative Commons.
 
 <img src="gra.png" />
