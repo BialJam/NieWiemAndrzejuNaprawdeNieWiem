@@ -19,3 +19,5 @@ W grze wcielamy się w **Króla w Sferze Sprawiedliwości**. Naszym celem jest z
 - Kaloryfer
 
 Cały kod gry oraz grafikę stworzyliśmy sami, jedynie muzyki Modgisa użyliśmy udostępnionej na licencji Creative Commons.
+
+<img src="gra.png" />
